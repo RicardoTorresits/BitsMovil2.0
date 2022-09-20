@@ -1,0 +1,6 @@
+#ignorar la llave
+my-upload-key.keystore
+node_modules/
+build/
+.gradle/
+Pods/

@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1060099751666",
+    "firebase_url": "https://itseekers-1582214344227.firebaseio.com",
+    "project_id": "itseekers-1582214344227",
+    "storage_bucket": "itseekers-1582214344227.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060099751666:android:035d30c6ec190f0b629a6b",
+        "android_client_info": {
+          "package_name": "com.bitsrncli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoMkugyEeIV-w0Lz1qvfYM15ExEC-wKrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.BitsRNCLI"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060099751666:android:c2fd5264e25d0496629a6b",
+        "android_client_info": {
+          "package_name": "com.itseekers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060099751666-u33alak0sn59ggngbbhg4h3n5rh8v3h8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itseekers",
+            "certificate_hash": "38a7f06698c5f0551f7e7730587375ca9442cc1e"
+          }
+        },
+        {
+          "client_id": "1060099751666-ukf5tr6rif3g78n590aibk61mgvmto68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itseekers",
+            "certificate_hash": "c34d8016c712e34f6bd58e7969fb99e91a79a747"
+          }
+        },
+        {
+          "client_id": "1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoMkugyEeIV-w0Lz1qvfYM15ExEC-wKrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.BitsRNCLI"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

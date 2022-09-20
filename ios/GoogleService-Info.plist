@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1060099751666-m0i2gk3bk9dnfqnirn3tbfismlam0bbl.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCfJE93nm6JpeCsu1GuKgCLYBhzvm97gS4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1060099751666</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.BitsRNCLI</string>
+	<key>PROJECT_ID</key>
+	<string>itseekers-1582214344227</string>
+	<key>STORAGE_BUCKET</key>
+	<string>itseekers-1582214344227.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1060099751666:ios:0447f39c60d47e9f629a6b</string>
+	<key>DATABASE_URL</key>
+	<string>https://itseekers-1582214344227.firebaseio.com</string>
+</dict>
+</plist>
