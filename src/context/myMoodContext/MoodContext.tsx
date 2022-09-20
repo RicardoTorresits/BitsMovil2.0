@@ -6,6 +6,7 @@ import { AuthContext } from '../authContext/AuthContext';
 
 type MoodProps ={
     dataMood:DataGrafic;
+    Perision:any;
     sendMood: (idUser:number,idMyMood:string,Comentario:string) => Promise<void>;
     getData: () => Promise<void>;
     ViewGrafic: () => Promise<void>;
@@ -34,7 +35,7 @@ export const MoodProvider = ({children}:any) => {
     }
 
     const getData = async() => {
-        const resp =  await (await bitsApi.get<DataGrafic>('/myMood'));
+        const resp =  await bitsApi.get<DataGrafic>('/myMood');
         setDataMood(resp.data)
     }
 
@@ -47,6 +48,7 @@ export const MoodProvider = ({children}:any) => {
     return(
         <MoodContext.Provider value={{
             dataMood,
+            Perision,
             sendMood,
             getData,
             ViewGrafic

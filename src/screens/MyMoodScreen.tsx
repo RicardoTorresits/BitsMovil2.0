@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
 
 import { HeaderCustomMood } from '../components/HeaderCustomMood';
 
@@ -23,6 +23,7 @@ interface Props extends StackScreenProps<any, any> {};
 export const MyMoodScreen = ({navigation}:Props) => {
 
 
+
   useEffect(() => {
     ViewGrafic()
   }, [])
@@ -32,14 +33,16 @@ export const MyMoodScreen = ({navigation}:Props) => {
   
   const {top}=useSafeAreaInsets()
 
-  const {getData,ViewGrafic} = useContext(MoodContext)
+  const {getData,ViewGrafic,Perision} = useContext(MoodContext)
 
   const Grafict = () => {
     getData()
     ViewGrafic()
-    
-
-    navigation.navigate('StadicticsMoodScreen')
+    if(Perision>0){
+      navigation.navigate('StadicticsMoodScreen')
+    }else{
+      Alert.alert('Debes elegir tu mood para poder ver las estadisticas')
+    }
   }
 
   
