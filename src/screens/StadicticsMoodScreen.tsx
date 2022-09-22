@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import { HeaderCustomMood } from '../components/HeaderCustomMood'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -16,7 +16,12 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
   
   const {top}=useSafeAreaInsets()
 
-  const {dataMood}=useContext(MoodContext)
+  const {dataMood,getData}=useContext(MoodContext)
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
 
   return (
     <View
@@ -31,11 +36,6 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
         <View
           style={styles.containerGraphics}
         >
-
-        
-          
-
-
           <Text
             style={{...styles.SubText,fontWeight:'400',marginTop:20}}
           >

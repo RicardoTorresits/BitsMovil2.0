@@ -69,5 +69,55 @@ export const styles = StyleSheet.create({
     ImageMessage:{
         width:30,
         height:30
+    },
+    modalContainerMater:{
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        //justifyContent: 'center',
+        //alignItems: 'center',
+    },
+    modalContainer:{
+        backgroundColor:'#FFFFFF',
+        width:326,
+        height:206,
+        borderRadius:29,
+        alignItems:'center',
+        justifyContent:'center',
+        top:'45%',
+        left:'8%',
+    },
+    modalText:{
+        color:'#303030',
+        fontSize:14,
+        fontWeight:'400',
+        lineHeight:16.41,
+        textAlign:"center",
+        marginVertical:10,
+        marginHorizontal:4
+    },
+    modalButton:{
+        width:105,
+        height:41.14,
+        borderRadius:20,
+        backgroundColor:'#FEC104',
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:10
+    },
+    modalButtonText:{
+        width:48.13,
+        height:19,
+        fontSize:16,
+        fontWeight:'700',
+        lineHeight:18.75,
+        textAlign:"center",
+        color:'#FFFFFF'
+    },
+    lineaGris:{
+        backgroundColor:'#C7CCDC',
+        borderWidth:1,
+        borderColor:'#C7CCDC',
+        width:'100%',
+        marginTop:29
     }
 });

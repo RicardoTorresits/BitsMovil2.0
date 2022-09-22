@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react'
-import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
+import React, { useContext, useEffect, useState } from 'react'
+import { Alert, Image, Modal, Text, TouchableOpacity, View } from 'react-native';
 
 import { HeaderCustomMood } from '../components/HeaderCustomMood';
 
@@ -7,6 +7,7 @@ import { styles } from '../theme/MyMoodTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StackScreenProps } from '@react-navigation/stack';
 import { MoodContext } from '../context/myMoodContext/MoodContext';
+import { color } from 'react-native-reanimated';
 
 const ArrMood=[
  {Icon:require('../assets/sentiment_very_satisfied-.png'), idMyMood:'1',color:'#367EEA',Nombre:'Motivado'},
@@ -22,11 +23,11 @@ interface Props extends StackScreenProps<any, any> {};
 
 export const MyMoodScreen = ({navigation}:Props) => {
 
-
+  const [modalVisible, setModalVisible] = useState(false)
 
   useEffect(() => {
     ViewGrafic()
-  }, [])
+  }, [modalVisible])
   
 
 
@@ -37,17 +38,83 @@ export const MyMoodScreen = ({navigation}:Props) => {
 
   const Grafict = () => {
     getData()
-    ViewGrafic()
+    //ViewGrafic()
     if(Perision>0){
       navigation.navigate('StadicticsMoodScreen')
     }else{
-      Alert.alert('Debes elegir tu mood para poder ver las estadisticas')
+      setModalVisible(true)
     }
   }
 
   
   return (
     <View style={{justifyContent:'center',alignItems:'center',top:top}}>
+
+        <Modal
+          animationType='fade'
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() =>{
+            setModalVisible(!modalVisible)
+          }}
+        >
+          <View
+            style={styles.modalContainerMater}
+          >
+            <View
+              style={styles.modalContainer}
+            >
+              <Image
+                source={require('../assets/ModalAlert.png')}
+              />
+              <View
+                style={{
+                  flexDirection: 'row',
+                  width:'100%',
+                  height:40,
+                  //paddingHorizontal:'19%',
+                  flexWrap:'wrap',
+                  
+                  alignItems:'center',
+                  justifyContent:'center'
+                }}
+              >
+                <Text
+                  style={styles.modalText}
+                >
+                  Debes elegir  
+                </Text>
+                <Text
+                  style={{...styles.modalText,color:'#093C5D',fontWeight:'500'}}
+                >
+                  tu mood
+                </Text>
+                <Text
+                  style={styles.modalText}
+                >
+                  para poder ver 
+                </Text>
+                <Text style={{...styles.modalText,marginTop:-20}}>
+                  las estadísticas
+                </Text>
+              </View>
+              <View
+                style={styles.lineaGris}
+              ></View>
+              <TouchableOpacity
+                style={styles.modalButton}
+                onPress={() =>setModalVisible(!modalVisible)}
+              >
+                <Text
+                  style={styles.modalButtonText}
+                >
+                  OK
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+
         <HeaderCustomMood/>
         <Text style={styles.title}>
           ¡Hola !
@@ -66,7 +133,6 @@ export const MyMoodScreen = ({navigation}:Props) => {
               <TouchableOpacity
               key={index}
                 onPress = { () => {navigation.navigate('MessageMoodScreen', {idMyMood:item.idMyMood})
-                console.log(item.idMyMood)
               }}
                 //onPress={() => console.log(item.idMyMood)}
               >

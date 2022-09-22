@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
         width:'100%',
         alignItems:'center',
         justifyContent:'space-between',
+        marginVertical:10
     },
     DraweButton:{
         marginLeft:30,
