@@ -73,11 +73,10 @@ export const AuthProvider = ({children}:any) => {
                     const googleCredetial = auth.GoogleAuthProvider.credential(idToken);
                     auth().signInWithCredential(googleCredetial);
                     const email = user.email;
-                    const img = user.photo;
                     const nombre = user.name;
                     const PrimerNombre=user.givenName?.split(' ');
                     setNombre(PrimerNombre[0])
-                    const resp = await bitsApi.put('/auth/googleApp',{email,nombre,img})
+                    const resp = await bitsApi.put('/auth/googleApp',{email,nombre})
                     dispatch({
                         type:'singUp',
                         payload:{
