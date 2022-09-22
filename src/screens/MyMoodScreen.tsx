@@ -61,9 +61,10 @@ export const MyMoodScreen = ({navigation}:Props) => {
           >
 
           </View>
-          {ArrMood.map((item)=>{
+          {ArrMood.map((item,index)=>{
             return(
               <TouchableOpacity
+              key={index}
                 onPress = { () => {navigation.navigate('MessageMoodScreen', {idMyMood:item.idMyMood})
                 console.log(item.idMyMood)
               }}

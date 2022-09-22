@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { TextInput, TouchableOpacity, View } from 'react-native'
+import { Keyboard, KeyboardAvoidingView, KeyboardAvoidingViewBase, Platform, TextInput, TouchableOpacity, View } from 'react-native'
 import { HeaderCustomMood } from '../components/HeaderCustomMood'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ButtonMotivado } from '../components/ButtonMotivado';
@@ -36,9 +36,11 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
       params.idMyMood,
       text
     )
+    Keyboard.dismiss();
     navigation.navigate('StadicticsMoodScreen')
 
   }
+  
 
 
   
@@ -87,6 +89,10 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
         >
           ¿por qué te sientes así ?
         </Text>
+
+        <KeyboardAvoidingView
+          behavior={(Platform.OS==='ios')? 'padding': 'height'}
+        >
 
         <View
           style={styles.messageContainer}
@@ -142,6 +148,9 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
           </View>
         </View>
+        </KeyboardAvoidingView>
+        
+        
 
 
         
