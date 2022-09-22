@@ -27,7 +27,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
 
   useEffect(() => {
     ViewGrafic()
-  }, [modalVisible])
+  }, [navigation])
   
 
 

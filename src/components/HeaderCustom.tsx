@@ -13,7 +13,7 @@ export const HeaderCustom = () => {
         <View style={{
             ...styles.subContianer,
             height:90,
-            
+            marginTop:0
         }}>
             <TouchableOpacity 
                 style={{...styles.DraweButton}}
