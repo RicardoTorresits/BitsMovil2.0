@@ -8,6 +8,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StackScreenProps } from '@react-navigation/stack';
 import { MoodContext } from '../context/myMoodContext/MoodContext';
 import { color } from 'react-native-reanimated';
+import { AuthContext } from '../context/authContext/AuthContext';
 
 const ArrMood=[
  {Icon:require('../assets/sentiment_very_satisfied-.png'), idMyMood:'1',color:'#367EEA',Nombre:'Motivado'},
@@ -24,9 +25,11 @@ interface Props extends StackScreenProps<any, any> {};
 export const MyMoodScreen = ({navigation}:Props) => {
 
   const [modalVisible, setModalVisible] = useState(false)
+  const {Nombre} = useContext(AuthContext)
 
   useEffect(() => {
     ViewGrafic()
+    console.log(Perision)
   }, [navigation])
   
 
@@ -117,7 +120,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
 
         <HeaderCustomMood/>
         <Text style={styles.title}>
-          ¡Hola !
+          ¡Hola {Nombre}!
         </Text>
         <Text style={styles.text}>
           ¿Cómo te sientes el día de hoy? 

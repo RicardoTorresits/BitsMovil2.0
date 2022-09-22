@@ -20,6 +20,7 @@ type AuthContextProps = {
     AuthLogin:string;
     Auth:string;
     user:any;
+    Nombre:any;
     token:string|null;
     status: 'checking'|'autheticated'|'not-autheticated';
     emailLogIn:() => void; 
@@ -43,6 +44,7 @@ export const AuthContext = createContext({} as AuthContextProps)
 export const AuthProvider = ({children}:any) => {
 
     const [AuthLogin, setAuthLogin] = useState('home')
+    const [Nombre, setNombre] = useState()
     const [Auth, setAuth] = useState('false')
     const [state, dispatch] = useReducer(AuthReducer, authInitialState);
 
@@ -72,7 +74,9 @@ export const AuthProvider = ({children}:any) => {
                     auth().signInWithCredential(googleCredetial);
                     const email = user.email;
                     const img = user.photo;
-                    const nombre = user.name
+                    const nombre = user.name;
+                    const PrimerNombre=user.givenName?.split(' ');
+                    setNombre(PrimerNombre[0])
                     const resp = await bitsApi.put('/auth/googleApp',{email,nombre,img})
                     dispatch({
                         type:'singUp',
@@ -103,6 +107,7 @@ export const AuthProvider = ({children}:any) => {
             ...state,
             AuthLogin,
             Auth,
+            Nombre,
             emailLogIn,
             recoveryAcount,
             goBackStart,
