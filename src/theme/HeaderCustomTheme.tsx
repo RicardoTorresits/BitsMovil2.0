@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         alignItems:'center',
     },
     subContianer:{
-        backgroundColor:'red',
+        backgroundColor:'#093C5D',
         flexDirection:'row',
         //borderBottomLeftRadius:100,
         borderBottomStartRadius:50,
