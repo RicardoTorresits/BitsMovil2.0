@@ -22,6 +22,7 @@ type AuthContextProps = {
     user:any;
     Nombre:any;
     token:string|null;
+    modalVisible:boolean;
     status: 'checking'|'autheticated'|'not-autheticated';
     emailLogIn:() => void; 
     recoveryAcount : () => void;
@@ -30,6 +31,7 @@ type AuthContextProps = {
     logInGoogle:() => void;
     logOut:() => void;
     logInchange:() => void;
+    ModalCloseOrOpen:() => void;
 }
 
 const authInitialState : AuthState ={
@@ -47,6 +49,7 @@ export const AuthProvider = ({children}:any) => {
     const [Nombre, setNombre] = useState()
     const [Auth, setAuth] = useState('false')
     const [state, dispatch] = useReducer(AuthReducer, authInitialState);
+    const [modalVisible, setModalVisible] = useState(false)
 
     const emailLogIn = () => {
         setAuthLogin('Email')
@@ -65,6 +68,11 @@ export const AuthProvider = ({children}:any) => {
     const logInchange = () =>{
         setAuth('false')
     }
+
+    const ModalCloseOrOpen = () => {
+        setModalVisible(!modalVisible)
+    }
+
     const logInGoogle = async () =>{
         try{
 
@@ -85,7 +93,7 @@ export const AuthProvider = ({children}:any) => {
                         } 
                     });
             }else{
-                Alert.alert('necesitamos acptes los aviosos de privacidad')
+                ModalCloseOrOpen();
             }
         }catch(error:any){
             console.log(error)
@@ -107,6 +115,7 @@ export const AuthProvider = ({children}:any) => {
             AuthLogin,
             Auth,
             Nombre,
+            modalVisible,
             emailLogIn,
             recoveryAcount,
             goBackStart,
@@ -114,6 +123,7 @@ export const AuthProvider = ({children}:any) => {
             logInchange,
             logInGoogle,
             logOut,
+            ModalCloseOrOpen,
         }}>
             {children}
         </AuthContext.Provider>

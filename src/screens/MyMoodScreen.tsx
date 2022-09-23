@@ -30,7 +30,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
   useEffect(() => {
     ViewGrafic()
     console.log(Perision)
-  }, [navigation])
+  }, [1000])
   
 
 

@@ -102,7 +102,15 @@ export const styles = StyleSheet.create({
         backgroundColor:'#FEC104',
         alignItems:'center',
         justifyContent:'center',
-        marginTop:10
+        marginTop:10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 0,
+        },
+        shadowOpacity: 0.23,
+        shadowRadius: 2.62,
+        elevation: 4,
     },
     modalButtonText:{
         width:48.13,
