@@ -105,5 +105,13 @@ export const styles = StyleSheet.create({
         fontSize:18,
         marginLeft:30,
         top:470,
+    },
+    avisoDePrivacidad:{
+        fontSize:14,
+        fontWeight:'500',
+        color:'#558AAC',
+        lineHeight:16.41,
+        top:'63%',
+        left:'20%'
     }
 });

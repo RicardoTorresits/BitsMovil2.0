@@ -63,6 +63,12 @@ const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
           Noticias
         </Text>
       </View>
+
+      <Text
+        style={styles.avisoDePrivacidad}
+      >
+        Aviso de Privacidad
+      </Text>
       
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.buttom}>
