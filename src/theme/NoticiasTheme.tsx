@@ -32,7 +32,8 @@ export const styles = StyleSheet.create({
         height:39,
         fontWeight:'500',
         fontSize:16,
-        lineHeight:18.75
+        lineHeight:18.75,
+        color:'#303030'
     },
     text:{
         width:72,
@@ -40,7 +41,8 @@ export const styles = StyleSheet.create({
         fontWeight:'300',
         fontSize:12,
         lineHeight:14.05,
-        marginTop:-20
+        marginTop:-20,
+        color:'#303030'
     },
     containePublicacion:{
         justifyContent:'center',
@@ -66,6 +68,7 @@ export const styles = StyleSheet.create({
         marginBottom:20, 
     },
     textNoticia:{
+        color:'#303030'
     },
     icon:{
         marginHorizontal:25

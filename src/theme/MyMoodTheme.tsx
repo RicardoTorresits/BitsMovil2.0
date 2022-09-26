@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         justifyContent:'center',
         fontWeight:'400',
         fontSize:21,
-        lineHeight:24.61
+        lineHeight:24.61,
     },
     ContainerButton:{
         alignItems:'center',
@@ -53,7 +53,8 @@ export const styles = StyleSheet.create({
         fontSize:21,
         fontWeight:'400',
         lineHeight:25,
-        marginLeft:30
+        marginLeft:30,
+        color:'#303030'
     },
     buttonMesage:{
         backgroundColor:'#F7B801',
@@ -93,7 +94,8 @@ export const styles = StyleSheet.create({
         lineHeight:16.41,
         textAlign:"center",
         marginVertical:10,
-        marginHorizontal:4
+        marginHorizontal:4,
+        
     },
     modalButton:{
         width:105,

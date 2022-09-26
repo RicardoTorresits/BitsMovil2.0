@@ -1,18 +1,16 @@
 import React,{ createContext, useEffect, useReducer, useState } from 'react';
 import { AuthReducer, AuthState } from './AuthReducer';
 import auth from '@react-native-firebase/auth'
-import { Result, Usuario } from '../../interface/AuthInterface';
 
 import {
     GoogleSignin,
-    statusCodes,
   } from '@react-native-google-signin/google-signin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import bitsApi from '../../api/bitsApi';
-import { Alert } from 'react-native';
+
 
 GoogleSignin.configure({
-    webClientId:'1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com',
+    webClientId:"1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
     iosClientId:'1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn.apps.googleusercontent.com'
 });
 
@@ -84,14 +82,18 @@ export const AuthProvider = ({children}:any) => {
                     const nombre = user.name;
                     const PrimerNombre=user.givenName?.split(' ');
                     setNombre(PrimerNombre[0])
-                    const resp = await bitsApi.put('/auth/googleApp',{email,nombre})
-                    dispatch({
-                        type:'singUp',
-                        payload:{
-                            user:resp.data.result,
-                            token:resp.data.token
-                        } 
-                    });
+                    try {   
+                        const resp = await bitsApi.put('/auth/googleApp',{email,nombre})
+                        dispatch({
+                            type:'singUp',
+                            payload:{
+                                user:resp.data.result,
+                                token:resp.data.token
+                            } 
+                        });
+                    } catch (error) {
+                     console.log(error)   
+                    }
             }else{
                 ModalCloseOrOpen();
             }
