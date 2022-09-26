@@ -12,8 +12,6 @@ const ArrReaccion=[
 export const Noticia = () => {
   return (
 
-    <ScrollView
-    >
         <View
             style={styles.container}
         >
@@ -68,7 +66,6 @@ export const Noticia = () => {
                 }
             </View>
         </View>
-    </ScrollView>
 
   )
 }

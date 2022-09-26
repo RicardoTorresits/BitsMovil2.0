@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         justifyContent:'center',
         alignContent:'center',
         borderRadius:25,
-        marginTop:0,
+        marginVertical:5,
         paddingHorizontal:'7%',
         paddingTop:'5%',
         shadowColor: "#000",
@@ -69,6 +69,33 @@ export const styles = StyleSheet.create({
     },
     icon:{
         marginHorizontal:25
+    },loading:{
+        backgroundColor:'white',
+        height:300,
+        marginTop:20
+    },
+    buttonNoticia:{
+        backgroundColor:'#F7B801',
+        width:45,
+        height:45,
+        top:'77%',
+        left:'85%',
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 0,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
+        position:'absolute',
+        borderRadius:100,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    imageButton:{
+        width:21.66,
+        height:21.66
     }
     
 });

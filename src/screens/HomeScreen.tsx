@@ -1,8 +1,10 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { HeaderCustom } from '../components/HeaderCustom'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Noticia } from '../components/Noticia';
+import { styles } from '../theme/NoticiasTheme';
+import { Image } from 'react-native-animatable';
 
 
 export const HomeScreen = () => {
@@ -12,9 +14,20 @@ export const HomeScreen = () => {
   return (
     <View style={{top:top}}>
         <HeaderCustom/>
-        <View>
+        <ScrollView>
           <Noticia/>
-        </View>
+          <Noticia/>
+          <Noticia/>
+          <View style={styles.loading}>
+          </View>
+        </ScrollView>
+        <TouchableOpacity
+            style={styles.buttonNoticia}
+          >
+            <Image
+              source={require('../assets/AgregarNoticia.png')}
+            />
+          </TouchableOpacity>
     </View>
   )
 }

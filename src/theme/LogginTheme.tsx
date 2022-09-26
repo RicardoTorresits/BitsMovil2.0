@@ -1,9 +1,6 @@
 import { ImageBackground, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    
-    
-   
     FormContainer:{
         position:'absolute',
         backgroundColor:'rgba(245, 246, 246, 1)',
