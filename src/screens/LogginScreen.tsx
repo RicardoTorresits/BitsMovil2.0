@@ -21,23 +21,27 @@ export const LogginScreen = () => {
     
   return (
     <View style={{flex:1, backgroundColor:'#093C5D'}}>
-      <LogoBits/>
-      <Text style={{fontSize:29.47,color:'#FFFFFF',textAlign:'center',fontWeight:'500',lineHeight:35}}>
-        ¡Bienvenid@!
-      </Text>
-      {
-        (AuthLogin ==='home')
-          && <LogIn/>
-      }
-      {
-        (AuthLogin==='Email')
-          &&<LogginEmail/>
-      }
-      {
-        (AuthLogin==='recovery')
-          && <RecuperarContraseña/>
-      }
-      <MonoComponent/>
+      <View style={{flex:.7}}>
+        <LogoBits/>
+        <Text style={{fontSize:29.47,color:'#FFFFFF',textAlign:'center',fontWeight:'500',lineHeight:35,marginTop:'6%'}}>
+          ¡Bienvenid@!
+        </Text>
+      </View>
+      <View style={{flex:1}}>
+        {
+          (AuthLogin ==='home')
+            && <LogIn/>
+        }
+        {
+          (AuthLogin==='Email')
+            &&<LogginEmail/>
+        }
+        {
+          (AuthLogin==='recovery')
+            && <RecuperarContraseña/>
+        }
+        <MonoComponent/>
+      </View>
     </View>
   )
 }

@@ -5,6 +5,7 @@ import { LogginScreen } from '../screens/LogginScreen';
 import { ShadowPropTypesIOS, View } from 'react-native';
 import { DrawerNavigation } from './DraweNavigation';
 import { AuthContext } from '../context/authContext/AuthContext';
+import { CrearNoticiaScreen } from '../screens/CrearNoticiaScreen';
 
 
 const Stack = createStackNavigator();
@@ -26,7 +27,10 @@ export const StackNavigator = () => {
           <Stack.Screen name="Home" component={LogginScreen} />
       )
       :(
-          <Stack.Screen name="DrawerNavigation" component={DrawerNavigation}/>
+          <>
+            <Stack.Screen name="DrawerNavigation" component={DrawerNavigation}/>
+            <Stack.Screen name="CrearNoticiaScreen" component={CrearNoticiaScreen}/>
+          </>
       )
 
     }

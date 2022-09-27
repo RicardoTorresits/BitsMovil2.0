@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { white } from "react-native-paper/lib/typescript/styles/colors";
+import { color } from 'react-native-reanimated';
 
 export const styles = StyleSheet.create({
     Title:{
@@ -20,6 +21,7 @@ export const styles = StyleSheet.create({
         height:410,
         backgroundColor:'#FFFFFF',
         alignItems:'center',
+        alignContent:'flex-start',
         marginTop:20,
         borderRadius:50,
         shadowColor: "#000",
@@ -36,14 +38,12 @@ export const styles = StyleSheet.create({
         width:248,
         height:320,
         marginTop:30,
-        justifyContent:'center',
-        alignItems:'center',
-        alignContent:'center',
-        //textAlign:'center',
+        textAlign:"left",
         fontSize:21,
         fontWeight:'400',
-        lineHeight:24.61
-        //backgroundColor:'red'
+        lineHeight:24.61,
+        color:'#303030',
+        textAlignVertical:'top'
     },
     containerButton:{
         flexDirection:'row',

@@ -2,22 +2,26 @@ import { ImageBackground, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     FormContainer:{
-        position:'absolute',
         backgroundColor:'rgba(245, 246, 246, 1)',
-        width:'100%',
-        height:486,
+        flex:1,
         borderTopLeftRadius:50,
         borderTopRightRadius:50,
-        alignContent:'center',
         alignItems:'center',
-        top:439
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 0,
+        },
+        shadowOpacity: 0.34,
+        shadowRadius: 6.27,
+        elevation: 10,
     },
     button:{
         flexDirection:'row',
         borderRadius:50,
-        marginTop:15,
+        marginTop:'3%',
         width:320,
-        height:55,
+        height:'15%',
         alignItems:'center',
         justifyContent:'center',
         shadowColor:'#000',
@@ -60,13 +64,10 @@ export const styles = StyleSheet.create({
         marginLeft:5,
         fontWeight:'400',
         color:'#303030'
-        //fontFamily:"Roboto"
     },
     modalContainerMater:{
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0.5)',
-        //justifyContent: 'center',
-        //alignItems: 'center',
     },
     modalContainer:{
         backgroundColor:'#FFFFFF',

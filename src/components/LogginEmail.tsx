@@ -113,15 +113,13 @@ export const LogginEmail = () => {
             <View 
                 style={{
                     flexDirection:'column', 
-                    position:'absolute',
-                    top:260
+                    backgroundColor:'red',
+                    //position:'absolute',
+                    top:'10%',
+                    right:'30%'
                 }}
             >
                 <TouchableOpacity
-                    style={{
-                        top:80,
-                        right:120
-                    }}
                     onPress={goBackStart}
                 >
                     <Image

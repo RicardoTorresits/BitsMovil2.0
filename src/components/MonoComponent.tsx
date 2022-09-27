@@ -7,16 +7,17 @@ export const MonoComponent = () => {
             source={require('../assets/Logo_Personas.png')}
             style={{ 
               position:'absolute',
-              width:216.67, 
-              height:183.72, 
+              //backgroundColor:'red',
+              width:'60%', 
+              height:'40%', 
               transform:
               [
                 {rotate:'-21.89deg'}
               ],
-              //top:710,
-              //left:217,
-              left:'50%',
-              top:'84%',
+              top:'73%',
+              left:170,
+              //left:'50%',
+              //top:'70%',
               }}
           />
   )

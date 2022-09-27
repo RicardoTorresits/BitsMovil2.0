@@ -8,9 +8,7 @@ export const BackGround = () => {
             position:'absolute',
             backgroundColor:'#093C5D',
             top:-25,
-            width:1000,
-            height:1200,
-            
+            flex:1
         }}
     />
   )

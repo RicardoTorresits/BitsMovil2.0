@@ -17,7 +17,7 @@ export const ButtonIos = () => {
         style={{...styles.icono,width:27,height:40, marginHorizontal:-15}}
       />
       <Text style={{...styles.text,fontSize:14, marginRight:-5}}>
-        INICIAR SECCION CON APPLE
+        INICIAR SESIÓN CON APPLE
       </Text>
     </TouchableOpacity>
   )

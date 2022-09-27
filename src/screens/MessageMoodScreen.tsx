@@ -100,7 +100,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
             <TextInput
               placeholder='Tu comentario es opcional'
-              placeholderTextColor="rgba(131,131,131,)"
+              placeholderTextColor="rgba(131,131,131,1)"
               style={styles.TextInput}
               multiline={true}
               maxLength={300}

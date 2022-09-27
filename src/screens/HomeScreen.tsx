@@ -5,9 +5,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Noticia } from '../components/Noticia';
 import { styles } from '../theme/NoticiasTheme';
 import { Image } from 'react-native-animatable';
+import { StackScreenProps } from '@react-navigation/stack';
+
+interface Props extends StackScreenProps<any, any> {};
 
 
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}:Props) => {
 
    const {top} = useSafeAreaInsets()
 
@@ -23,6 +26,7 @@ export const HomeScreen = () => {
         </ScrollView>
         <TouchableOpacity
             style={styles.buttonNoticia}
+            onPress={() => navigation.navigate('CrearNoticiaScreen')}
           >
             <Image
               source={require('../assets/AgregarNoticia.png')}

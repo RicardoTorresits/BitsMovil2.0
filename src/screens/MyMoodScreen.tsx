@@ -30,7 +30,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
   useEffect(() => {
     ViewGrafic()
     console.log(Perision)
-  }, [1000])
+  }, [modalVisible])
   
 
 
@@ -41,7 +41,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
 
   const Grafict = () => {
     getData()
-    //ViewGrafic()
+    ViewGrafic()
     if(Perision>0){
       navigation.navigate('StadicticsMoodScreen')
     }else{

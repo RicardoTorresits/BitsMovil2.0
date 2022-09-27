@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     ContainerButton:{
         alignItems:'center',
         alignContent:'center',
-        height:524.39,
+        height:554.39,
         width:'100%',
         backgroundColor:'#FFFFFF',
         borderTopLeftRadius:50,

@@ -90,7 +90,7 @@ export const LogIn = () => {
 
 
         <TouchableOpacity 
-            style={{...styles.button,marginTop:55}}
+            style={{...styles.button,marginTop:'10%'}}
             onPress={emailLogIn}
         >
             <Image
@@ -98,7 +98,7 @@ export const LogIn = () => {
                 style={{...styles.icono,marginHorizontal:-5}}
             />
             <Text style={{...styles.text,fontSize:14}}>
-                INICIAR SECCION CON E-MAIL
+                INICIAR SESIÓN CON E-MAIL
             </Text>
         </TouchableOpacity>
           {
@@ -114,7 +114,7 @@ export const LogIn = () => {
               style={{...styles.icono,marginHorizontal:5}}
             />
             <Text style={{...styles.text,fontSize:14}}>
-              INICIAR SECCION CON GOOGLE
+              INICIAR SESIÓN CON GOOGLE
             </Text>
         </TouchableOpacity>
         <View style={{flexDirection:'row', marginTop:20}}>
@@ -128,9 +128,14 @@ export const LogIn = () => {
                   </TouchableOpacity>
               }
             </TouchableOpacity>
-            <Text style={{color:'#303030'}}>
-              Acepto el aviso de privacidad
-            </Text>
+            <View style={{flexDirection:'row', flexWrap:'wrap'}}>
+              <Text style={{color:'#303030',fontWeight:'400'}}>
+                Acepto el
+              </Text>
+              <Text style={{color:'#093C5D', marginLeft:5, fontWeight:'500'}}>
+                aviso de privacidad
+              </Text>
+            </View>
         </View>
     </View>   
   )
