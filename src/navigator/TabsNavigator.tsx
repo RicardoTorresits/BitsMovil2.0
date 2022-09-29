@@ -114,7 +114,7 @@ export const TabsNavigator = () => {
       screenOptions={{
         headerShown:false,
         tabBarStyle:{
-          height:83,
+          height:'9.8%',
           paddingTop:2,
           justifyContent:'center',
           alignItems:'center',

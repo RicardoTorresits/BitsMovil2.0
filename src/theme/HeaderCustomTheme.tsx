@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     container:{
         backgroundColor:'#093C5D',
         flexDirection:'column',
-        //borderBottomLeftRadius:100,
         borderBottomStartRadius:50,
         width:'100%',
         height:160,
@@ -15,7 +14,6 @@ export const styles = StyleSheet.create({
     subContianer:{
         backgroundColor:'#093C5D',
         flexDirection:'row',
-        //borderBottomLeftRadius:100,
         borderBottomStartRadius:50,
         width:'100%',
         alignItems:'center',

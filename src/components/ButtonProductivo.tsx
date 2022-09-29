@@ -1,11 +1,11 @@
 import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text,View } from 'react-native'
 import { styles } from '../theme/MyMoodTheme'
 
 export const ButtonProductivo = () => {
   return (
     <View
-      style={{...styles.Button,borderColor:'#42DBBE',marginTop:50,flexDirection:'row'}}
+      style={{...styles.Button,borderColor:'#42DBBE'}}
     >
             <Image
                 source={require('../assets/sentiment_satisfied.png')}

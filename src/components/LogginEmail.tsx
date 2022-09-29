@@ -106,17 +106,16 @@ export const LogginEmail = () => {
                     }}
                     onPress={logIn}
                 >
-                    Iniciar Sesión
+                    Iniciar sesión
                 </Text>
             </TouchableOpacity>
 
             <View 
                 style={{
                     flexDirection:'column', 
-                    backgroundColor:'red',
-                    //position:'absolute',
-                    top:'10%',
-                    right:'30%'
+                    position:'absolute',
+                    top:'65%',
+                    right:'83%'
                 }}
             >
                 <TouchableOpacity

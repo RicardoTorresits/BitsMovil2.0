@@ -21,7 +21,7 @@ export const RecuperarContraseña = () => {
         <View>
           <Text 
             style={{
-              marginTop:60,
+              marginTop:40,
               marginLeft:20,
               fontSize:22, 
               fontWeight:'400',
@@ -49,21 +49,18 @@ export const RecuperarContraseña = () => {
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.text}>
-            Restablecer
+            Restablecer contraseña
           </Text>
         </TouchableOpacity>
         <View 
           style={{
             flexDirection:'row', 
             position:'absolute',
-            top:240
+            top:'80%',
+            right:'83%'
           }}
         >
           <TouchableOpacity
-            style={{
-              top:80,
-              right:120
-            }}
             onPress={emailLogIn}
           >
             <Image

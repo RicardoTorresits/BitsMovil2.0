@@ -4,8 +4,8 @@ export const styles = StyleSheet.create({
     title:{
         color:'#093C5D',
         textAlign:'center',
-        justifyContent:'center',
-        marginTop:10,
+        //justifyContent:'center',
+        marginTop:'2%',
         fontWeight:'700',
         fontSize:21,
         lineHeight:24.61
@@ -20,13 +20,13 @@ export const styles = StyleSheet.create({
     },
     ContainerButton:{
         alignItems:'center',
-        alignContent:'center',
-        height:554.39,
+        justifyContent:'center',
         width:'100%',
+        height:'80%',
         backgroundColor:'#FFFFFF',
         borderTopLeftRadius:50,
         borderTopRightRadius:50,
-        marginTop:30,
+        marginTop:20,
         shadowColor: "#000",
         shadowOffset: {
 	        width: 0,
@@ -34,29 +34,42 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-        elevation: 5,
+        elevation: 5
     },
     Button:{
         backgroundColor:'#FFFFFF',
         borderRadius:50,
         borderWidth:3,
-        flexDirection:'row',
+        marginTop:'6%',
+        bottom:'15%',
+        width:'63%',
+        height:'8.5%',
         alignItems:'center',
-        height:70,
-        width:270,
-        marginTop:10,
+        flexDirection:'row',
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     },
     imageButton:{
-        marginLeft:30
+        marginLeft:30, 
+        width:30,
+        height:30,
     },
     textButton:{
         fontSize:21,
         fontWeight:'400',
         lineHeight:25,
-        marginLeft:30,
-        color:'#303030'
+        color:'#303030',
+        textAlign:"auto",
+        marginLeft:30
     },
     buttonMesage:{
+        position:'absolute',
         backgroundColor:'#F7B801',
         borderRadius:100,
         width:50,
@@ -64,8 +77,16 @@ export const styles = StyleSheet.create({
         justifyContent:'center',
         alignContent:'center',
         alignItems:'center',
-        top:10,
-        left:150
+        top:'75%',
+        left:'80%',
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     },
     ImageMessage:{
         width:30,
@@ -74,8 +95,6 @@ export const styles = StyleSheet.create({
     modalContainerMater:{
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0.5)',
-        //justifyContent: 'center',
-        //alignItems: 'center',
     },
     modalContainer:{
         backgroundColor:'#FFFFFF',

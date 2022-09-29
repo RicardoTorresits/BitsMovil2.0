@@ -15,7 +15,7 @@ const ArrMood=[
  {Icon:require('../assets/sentiment_satisfied.png'), idMyMood:'2',color:'#42DBBE',Nombre:'Productivo'},
  {Icon:require('../assets/sentiment_neutral.png'), idMyMood:'3',color:'#9D57E5',Nombre:'Aburrido'},
  {Icon:require('../assets/Vector.png'), idMyMood:'4',color:'#FEC104',Nombre:'Presionado'},
- {Icon:require('../assets/Mad.png'), idMyMood:'5',color:'#FB337B',Nombre:'Enojado'}
+ {Icon:require('../assets/Mad.png'), idMyMood:'5',color:'#FB337B',Nombre:'Enfadado'}
 ]
 
 
@@ -51,9 +51,8 @@ export const MyMoodScreen = ({navigation}:Props) => {
 
   
   return (
-    <View style={{justifyContent:'center',alignItems:'center',top:top}}>
-
-        <Modal
+    <View style={{top:top, flex:1,alignContent:'center'}}>
+         <Modal
           animationType='fade'
           transparent={true}
           visible={modalVisible}
@@ -118,32 +117,31 @@ export const MyMoodScreen = ({navigation}:Props) => {
           </View>
         </Modal>
 
-        <HeaderCustomMood/>
-        <Text style={styles.title}>
-          ¡Hola {Nombre}!
-        </Text>
-        <Text style={styles.text}>
-          ¿Cómo te sientes el día de hoy? 
-        </Text>
+          <HeaderCustomMood/>
+
+          <Text style={styles.title}>
+            ¡Hola {Nombre}!
+          </Text>
+          <Text style={styles.text}>
+            ¿Cómo te sientes el día de hoy? 
+          </Text>
         <View style={{...styles.ContainerButton}}>
           <View
-            style={{marginBottom:20}}
+            style={{marginBottom:'3%'}}
           >
 
           </View>
+          
           {ArrMood.map((item,index)=>{
             return(
               <TouchableOpacity
-              key={index}
+                key={index}
                 onPress = { () => {navigation.navigate('MessageMoodScreen', {idMyMood:item.idMyMood})
               }}
-                //onPress={() => console.log(item.idMyMood)}
+              style={{...styles.Button,
+              borderColor:item.color,
+              }}
               >
-                <View 
-                  style={{...styles.Button,flexDirection:'row',
-                  borderColor:item.color,marginTop:15
-                  }}
-                >
                   <Image
                     source={item.Icon}
                     style={styles.imageButton}
@@ -151,7 +149,6 @@ export const MyMoodScreen = ({navigation}:Props) => {
                   <Text style={styles.textButton}>
                     {item.Nombre}
                   </Text>
-                </View>
               </TouchableOpacity>
             )
           })}
@@ -163,7 +160,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
               style={styles.ImageMessage}
             />
           </TouchableOpacity>
-        </View>
+        </View> 
     </View>
     
   )

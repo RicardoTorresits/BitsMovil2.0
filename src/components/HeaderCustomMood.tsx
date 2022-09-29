@@ -1,12 +1,8 @@
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from '../theme/HeaderCustomTheme';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const HeaderCustomMood = () => {
-
-    const {top} = useSafeAreaInsets();
-
   return (
     <View style={{
         ...styles.subContianer,

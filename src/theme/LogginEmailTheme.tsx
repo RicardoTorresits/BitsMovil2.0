@@ -7,12 +7,18 @@ export const styles = StyleSheet.create({
         backgroundColor:'rgba(245, 246, 246, 1)',
         width:'100%',
         height:498,
-        //top:429,
-        //top:'51%',
         borderTopLeftRadius:50,
         borderTopRightRadius:50,
         alignContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 0,
+        },
+        shadowOpacity: 0.34,
+        shadowRadius: 6.27,
+        elevation: 10,
     },
     text:{
         fontSize:20,
