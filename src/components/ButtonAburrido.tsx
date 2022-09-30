@@ -7,14 +7,17 @@ export const ButtonAburrido = () => {
     <View
       style={{
         ...styles.Button,
+        height:'100%',
         borderColor:'#9D57E5',
-        marginTop:50,
-        flexDirection:'row'
+        flexDirection:'row',
+        marginTop:'15%',
+        width:'100%',
+        justifyContent:'center',
       }}
     >
             <Image
                 source={require('../assets/sentiment_neutral.png')}
-                style={styles.imageButton}
+                style={{...styles.imageButton,marginLeft:'-10%'}}
             />
             <Text style={styles.textButton}>
                 Aburrido

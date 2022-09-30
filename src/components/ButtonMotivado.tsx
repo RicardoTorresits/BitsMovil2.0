@@ -9,12 +9,16 @@ export const ButtonMotivado = () => {
   return (
     <View 
       style={{...styles.Button,flexDirection:'row',
-      borderColor:'#367EEA',marginTop:50
+      height:'100%',
+      borderColor:'#367EEA',
+      marginTop:'15%',
+      width:'100%',
+      justifyContent:'center',
     }}
     >
             <Image
                 source={require('../assets/sentiment_very_satisfied-.png')}
-                style={styles.imageButton}
+                style={{...styles.imageButton,marginLeft:'-10%'}}
             />
             <Text style={styles.textButton}>
                 Motivado

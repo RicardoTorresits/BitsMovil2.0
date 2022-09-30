@@ -5,11 +5,18 @@ import { styles } from '../theme/MyMoodTheme'
 export const ButtonProductivo = () => {
   return (
     <View
-      style={{...styles.Button,borderColor:'#42DBBE'}}
+      style={{...styles.Button, 
+      height:'100%',
+      borderColor:'#42DBBE',
+      flexDirection:'row',
+      marginTop:'15%',
+      width:'100%',
+      justifyContent:'center',
+    }}
     >
             <Image
                 source={require('../assets/sentiment_satisfied.png')}
-                style={styles.imageButton}
+                style={{...styles.imageButton,marginLeft:'-10%'}}
             />
             <Text style={styles.textButton}>
                 Productivo

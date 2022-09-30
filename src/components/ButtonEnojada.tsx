@@ -7,14 +7,17 @@ export const ButtonEnojada = () => {
     <View
       style={{
         ...styles.Button,
+        height:'100%',
         borderColor:'#FB337B',
         flexDirection:'row',
-        marginTop:50
+        marginTop:'15%',
+        width:'100%',
+        justifyContent:'center',
       }}
     >
             <Image
                 source={require('../assets/Mad.png')}
-                style={styles.imageButton}
+                style={{...styles.imageButton,marginLeft:'-10%'}}
             />
             <Text style={styles.textButton}>
                 Enfadado

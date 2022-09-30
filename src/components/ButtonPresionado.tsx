@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { styles } from '../theme/MyMoodTheme'
 
 export const ButtonPresionado = () => {
@@ -7,16 +7,19 @@ export const ButtonPresionado = () => {
     <View
       style={{
         ...styles.Button,
+        height:'100%',
         borderColor:'#FEC104',
         flexDirection:'row',
-        marginTop:50
+        width:'100%',
+        justifyContent:'center',
+        marginTop:'15%',
       }}
     >
             <Image
                 source={require('../assets/Vector.png')}
-                style={styles.imageButton}
+                style={{...styles.imageButton,marginLeft:'-10%'}}
             />
-            <Text style={styles.textButton}>
+            <Text style={{...styles.textButton}}>
                 Presionado
             </Text>
     </View>

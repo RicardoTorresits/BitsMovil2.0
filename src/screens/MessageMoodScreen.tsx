@@ -50,105 +50,112 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
   return (
     <View
-      style={{top:top,justifyContent:'center',alignItems:'center'}}
+      style={{top:top,alignItems:'center',flex:1}}
     >
-        <HeaderCustomMood/>
+      <HeaderCustomMood/>
+      <View style={{justifyContent:'center',alignItems:'center'}}>
         <View
-          style={{marginTop:-40}}
-        >
-          {
-            (params.idMyMood==='1')
-              && <ButtonMotivado/>
-              
-          }
-          {
-            (params.idMyMood==='2')
-              && <ButtonProductivo/>
-          }
-          {
-            (params.idMyMood==='3')
-              && <ButtonAburrido/>
-          }
-          {
-            (params.idMyMood==='4')
-              && <ButtonPresionado/>
-          }
-          {
-            (params.idMyMood==='5')
-              && <ButtonEnojada/>
-          }
+          style={{
+            width:300,
+            height:60,
+          }}
+            
+          >
+            {
+              (params.idMyMood==='1')
+                && <ButtonMotivado/>
+                
+            }
+            {
+              (params.idMyMood==='2')
+                && <ButtonProductivo/>
+            }
+            {
+              (params.idMyMood==='3')
+                && <ButtonAburrido/>
+            }
+            {
+              (params.idMyMood==='4')
+                && <ButtonPresionado/>
+            }
+            {
+              (params.idMyMood==='5')
+                && <ButtonEnojada/>
+            }
         </View>
 
-        <Text
-          style={styles.Title}
-        >
-          Cuéntanos
-        </Text>
-        <Text
-          style={styles.text}
-        >
-          ¿por qué te sientes así ?
-        </Text>
+          <Text
+            style={{...styles.Title}}
+          >
+            Cuéntanos
+          </Text>
+          <Text
+            style={styles.text}
+          >
+            ¿por qué te sientes así ?
+          </Text>
 
-        <KeyboardAvoidingView
-          behavior={(Platform.OS==='ios')? 'padding': 'height'}
-        >
-
-        <View
-          style={styles.messageContainer}
-        >
-
-            <TextInput
-              placeholder='Tu comentario es opcional'
-              placeholderTextColor="rgba(131,131,131,1)"
-              style={styles.TextInput}
-              multiline={true}
-              maxLength={300}
-              onChangeText={(value)=> onChange(value,'text')}
-              value={text}
-              onSubmitEditing={sendMessage}
-            />
+          <KeyboardAvoidingView
+            behavior={(Platform.OS==='ios')? 'padding': 'height'}
+          >
 
           <View
-            style={styles.containerButton}
+            style={styles.messageContainer}
           >
-            <TouchableOpacity
-              style={{...styles.button,
-                borderColor:'#C7CCDC',
-                borderWidth:1,
-              }}
-              onPress={() => navigation.popToTop()}
-            >
-              <Text
-                style={{
-                  ...styles.textButton,
-                  color:'#093C5D'
-                }}
-                
-              >
-                Cancelar
-              </Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity
-              style={{...styles.button,
-                backgroundColor:'#FEC104',
-              }}
-              onPress={sendMessage}
-            >
-              <Text
-                style={{
-                  ...styles.textButton,
-                  color:'#FFFFFF'
-                }}
-              >
-                Enviar
-              </Text>
-            </TouchableOpacity>
+              <TextInput
+                placeholder='Tu comentario es opcional'
+                placeholderTextColor="rgba(131,131,131,1)"
+                style={styles.TextInput}
+                multiline={true}
+                maxLength={300}
+                onChangeText={(value)=> onChange(value,'text')}
+                value={text}
+                onSubmitEditing={sendMessage}
+              />
 
+            <View
+              style={styles.containerButton}
+            >
+              <TouchableOpacity
+                style={{...styles.button,
+                  borderColor:'#C7CCDC',
+                  borderWidth:1,
+                }}
+                onPress={() => navigation.popToTop()}
+              >
+                <Text
+                  style={{
+                    ...styles.textButton,
+                    color:'#093C5D'
+                  }}
+                  
+                >
+                  Cancelar
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={{...styles.button,
+                  backgroundColor:'#FEC104',
+                }}
+                onPress={sendMessage}
+              >
+                <Text
+                  style={{
+                    ...styles.textButton,
+                    color:'#FFFFFF'
+                  }}
+                >
+                  Enviar
+                </Text>
+              </TouchableOpacity>
+
+            </View>
           </View>
-        </View>
-        </KeyboardAvoidingView>
+          </KeyboardAvoidingView>
+      </View>
+  
         
         
 

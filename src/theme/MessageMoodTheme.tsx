@@ -7,22 +7,23 @@ export const styles = StyleSheet.create({
         color:'#093C5D',
         fontWeight:'700',
         fontSize:21,
-        marginTop:10,
-        lineHeight:24.61
+        lineHeight:24.61,
+        marginTop:'5%'
     },
     text:{
         color:'#093C5D',
         fontWeight:'400',
         fontSize:21,
-        lineHeight:24.61
+        lineHeight:24.61,
     },
     messageContainer:{
-        width:346.63,
-        height:410,
+        width:'140%',
+        height:'73%',
+        marginTop:'5%',
         backgroundColor:'#FFFFFF',
         alignItems:'center',
+        justifyContent:'center',
         alignContent:'flex-start',
-        marginTop:20,
         borderRadius:50,
         shadowColor: "#000",
         shadowOffset: {
@@ -31,12 +32,10 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
-
         elevation: 7,
     },
     TextInput:{
-        width:248,
-        height:320,
+        flex:1,
         marginTop:30,
         textAlign:"left",
         fontSize:21,
@@ -48,11 +47,13 @@ export const styles = StyleSheet.create({
     containerButton:{
         flexDirection:'row',
         justifyContent:'center',
-        width:'100%'
+        alignContent:'center',
+        alignItems:'center',
+        paddingHorizontal:'5%'
     },
     button:{
-        height:41.14,
-        width:109,
+        height:'40%',
+        width:'30%',
         justifyContent:'center',
         alignItems:'center',
         borderRadius:20,
