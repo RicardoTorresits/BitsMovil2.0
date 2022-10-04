@@ -28,7 +28,7 @@ export const Contact = (props:any) => {
             data={props.Contacts}
             keyExtractor={(p) => p.idUsuario}
             showsVerticalScrollIndicator={false}
-            style={{backgroundColor:'red'}}
+            style={{}}
             renderItem={({item}) =>(
                 <View >
                 {
