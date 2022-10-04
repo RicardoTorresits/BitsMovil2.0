@@ -5,8 +5,8 @@ import { styles } from '../theme/NoticiasTheme'
 
 const ArrReaccion=[
     {Icon:require('../assets/Group.png'), idReaccion:'1'},
-    {Icon:require('../assets/reaccion.png'),idReaccion:'1'},
-    {Icon:require('../assets/favorite_border.png'),idReaccion:'1'}
+    {Icon:require('../assets/reaccion.png'),idReaccion:'2'},
+    {Icon:require('../assets/favorite_border.png'),idReaccion:'3'}
 ]
 
 export const Noticia = () => {

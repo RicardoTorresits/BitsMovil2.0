@@ -1,5 +1,5 @@
 import React,{useContext, useEffect, useState} from 'react'
-import { ScrollView,Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView,Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import bitsApi from '../api/bitsApi';
 import { Contact } from '../components/Contact';
@@ -12,7 +12,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const ContactsScreen = () => {
 
-  const {top} = useSafeAreaInsets()
+  const {top,bottom} = useSafeAreaInsets()
+  const {height}=useWindowDimensions();
 
   const {user} = useContext(AuthContext)
 
@@ -24,7 +25,8 @@ export const ContactsScreen = () => {
 
   const load = async () => {
     let respuesta = await bitsApi.get(`/contacts/?id=${user.idUsuarioRespuesta}`)
-    setInitialData(respuesta.data.data)
+    setInitialData(respuesta.data.result)
+    console.log(respuesta.data.result)
   }
 
   useEffect(() => {
@@ -118,14 +120,15 @@ const deleteavorite = async (idUser:string, idFavorite:number ) => {
         </TouchableOpacity>
       </View>
 
-        <View style={{justifyContent:'center', alignItems:'center',marginBottom:530}}>
           <Contact 
             Contacts={Contacts} 
             addFavorite={addFavorite} 
             deleteavorite={deleteavorite} 
             button={button}
           />
-        </View>
+          
+
+        
 
     </View>
   )

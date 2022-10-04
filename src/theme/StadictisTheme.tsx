@@ -8,17 +8,18 @@ export const styles = StyleSheet.create({
         lineHeight:24.61,
         color:'#093C5D',
         fontWeight:'700',
-        textAlign:'center'
+        textAlign:'center',
+        marginTop:'0%',
+        marginBottom:'2%'
     },
     containerGraphics:{
         width:'100%',
-        height:540.39,
+        flex:1,
         backgroundColor:'#FFFFFF',
-        marginTop:50,
         borderTopEndRadius:50,
         borderTopStartRadius:50,
-        borderBottomEndRadius:20,
         alignItems:'center',
+        marginTop:'2%'
     },
     SubText:{
         fontSize:21,
@@ -27,16 +28,15 @@ export const styles = StyleSheet.create({
     },
     graphicsContainer:{
         flexDirection:'row',
-        marginTop:30
     },
     button:{
         backgroundColor:'#FEC104',
-        width:100,
-        height:41.14,
+        width:'27%',
+        height:'7%',
         justifyContent:'center',
         alignItems:'center',
         borderRadius:20,
-        marginTop:-90
+        marginTop:'-26%'
     },
     buttonText:{
         color:'#FFFFFF',
@@ -47,13 +47,15 @@ export const styles = StyleSheet.create({
     moodButton:{
         backgroundColor:'#093C5D',
         width:140.36,
-        height:50.93,
+        height:'11%',
         borderRadius:50,
         marginLeft:10,
-        marginVertical:5,
+        marginVertical:'3%',
         alignItems:'center',
         flexDirection:'row',
-        justifyContent:'space-evenly'
+        justifyContent:'space-around',
+        alignContent:'center',
+    
         
     },
     moddText:{
@@ -62,23 +64,22 @@ export const styles = StyleSheet.create({
         fontSize:14,
         fontWeight:'500',
         lineHeight:12.89,
+        textAlign:'center',
+        marginLeft:10
     },
     moodColor:{
         width:15,
         height:15,
         borderRadius:100,
-        marginLeft:5
+        marginLeft:13
     },
     moodNumber:{
         fontSize:10,
         fontWeight:'400',
         lineHeight:11.72,
         color:'#FFFFFF',
-        marginRight:5
-    },
-    grafic:{
-        width:175.54,
-        height:175.84
+        marginRight:15,
+        marginLeft:10,
     },
     graficText:{
         color:"#093C5D",

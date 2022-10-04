@@ -17,8 +17,8 @@ export const styles = StyleSheet.create({
         lineHeight:24.61,
     },
     messageContainer:{
-        width:'140%',
-        height:'73%',
+        width:'100%',
+        height:'75%',
         marginTop:'5%',
         backgroundColor:'#FFFFFF',
         alignItems:'center',
@@ -37,7 +37,6 @@ export const styles = StyleSheet.create({
     TextInput:{
         flex:1,
         marginTop:30,
-        textAlign:"left",
         fontSize:21,
         fontWeight:'400',
         lineHeight:24.61,
@@ -52,12 +51,20 @@ export const styles = StyleSheet.create({
         paddingHorizontal:'5%'
     },
     button:{
-        height:'40%',
+        height:'43%',
         width:'30%',
         justifyContent:'center',
         alignItems:'center',
         borderRadius:20,
-        marginHorizontal:5
+        marginHorizontal:5,
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 1,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 1.41,
+        elevation: 2,
     },
     textButton:{
         fontSize:16,

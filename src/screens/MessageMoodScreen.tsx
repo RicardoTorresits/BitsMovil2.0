@@ -50,7 +50,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
   return (
     <View
-      style={{top:top,alignItems:'center',flex:1}}
+      style={{top:top,alignItems:'center',flex:1,width:'100%'}}
     >
       <HeaderCustomMood/>
       <View style={{justifyContent:'center',alignItems:'center'}}>
@@ -97,6 +97,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
           <KeyboardAvoidingView
             behavior={(Platform.OS==='ios')? 'padding': 'height'}
+            style={{width:360}}
           >
 
           <View
@@ -108,6 +109,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
                 placeholderTextColor="rgba(131,131,131,1)"
                 style={styles.TextInput}
                 multiline={true}
+                textAlign={'left'}
                 maxLength={300}
                 onChangeText={(value)=> onChange(value,'text')}
                 value={text}
