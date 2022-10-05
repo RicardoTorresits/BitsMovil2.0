@@ -89,7 +89,7 @@ export const CrearNoticiaScreen = () => {
                             borderColor:'#C7CCDC',
                             borderWidth:1
                         }}
-                        onPress={takePhoto}    
+                           
                     >
                         <Text style={{...styles.ButtonText,color:'#093C5D'}}>
                             Cancelar
