@@ -1,11 +1,22 @@
-import React from 'react'
+import { StackScreenProps } from '@react-navigation/stack';
+import React, { useState } from 'react'
 import { Image, StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/CrearNoticiaTheme';
 
-export const CrearNoticiaScreen = () => {
+interface Props extends StackScreenProps<any, any> {};
+
+export const CrearNoticiaScreen = ({navigation}:Props) => {
     const {top} = useSafeAreaInsets()
+
+    const [tempUri, settempUri] = useState<string>()
+
+    const {text,onChange,img} = useForm({
+        text:''
+      });
+
 
     const takePhoto = () => {
         launchCamera({
@@ -14,6 +25,7 @@ export const CrearNoticiaScreen = () => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
+          settempUri(resp.assets[0].uri)
         });
       }
 
@@ -24,6 +36,7 @@ export const CrearNoticiaScreen = () => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
+          settempUri(resp.assets[0].uri)
         });
       }
 
@@ -58,11 +71,23 @@ export const CrearNoticiaScreen = () => {
                     multiline={true}
                     textAlign={'left'}
                     maxLength={10000}
-                    onChangeText={(value)=> {}}
-                    //value={}
+                    onChangeText={(value)=> {onChange(value,'text')}}
+                    value={text}
                     //onSubmitEditing={}
                 />
-                <Image/>
+                {
+                    (img.length > 0 && !tempUri)&&(
+                        <Image
+                            source={{uri:img}}
+                            style={{
+                                width:'100%',
+                                height:500,
+                                alignItems:'center',
+                                marginTop:10
+                            }}
+                        />
+                    )
+                }
             </ScrollView>
             <View style={{width:'100%',marginTop:'3%',height:.5,backgroundColor:'#656565'}}/>
             <View style={styles.containerMasterButton}>
@@ -89,13 +114,15 @@ export const CrearNoticiaScreen = () => {
                             borderColor:'#C7CCDC',
                             borderWidth:1
                         }}
-                           
+                        onPress={navigation.popToTop} 
                     >
                         <Text style={{...styles.ButtonText,color:'#093C5D'}}>
                             Cancelar
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{...styles.Button,backgroundColor:'#FABB00'}}>
+                    <TouchableOpacity 
+                        style={{...styles.Button,backgroundColor:'#FABB00'}}
+                    >
                         <Text style={{...styles.ButtonText,color:'#FFFFFF'}}>
                             Publicar
                         </Text>

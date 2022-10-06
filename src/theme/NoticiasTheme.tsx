@@ -72,7 +72,8 @@ export const styles = StyleSheet.create({
     },
     icon:{
         marginHorizontal:25
-    },loading:{
+    },
+    loading:{
         backgroundColor:'white',
         height:300,
         marginTop:20

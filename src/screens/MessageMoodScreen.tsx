@@ -32,7 +32,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
 
   const sendMessage = () => {
     sendMood(
-     user.idUsuarioRespuesta,
+      user.idUsuarioRespuesta,
       params.idMyMood,
       text
     )
