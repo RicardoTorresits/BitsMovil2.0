@@ -14,7 +14,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
     const [tempUri, settempUri] = useState<string>()
 
     const {text,onChange,img} = useForm({
-        text:''
+        text:'',
+        img:''
       });
 
 
@@ -76,7 +77,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                     //onSubmitEditing={}
                 />
                 {
-                    (img?.length > 0 && !tempUri)&&(
+                    (img.length > 0 && !tempUri)&&(
                         <Image
                             source={{uri:img}}
                             style={{
@@ -85,6 +86,18 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                                 alignItems:'center',
                                 marginTop:10
                             }}
+                        />
+                    )
+                }
+                {
+                    (tempUri) && (
+                        <Image
+                        source={{uri:tempUri}}
+                        style={{
+                            width:'100%',
+                            height:400,
+                            marginTop:20
+                        }}
                         />
                     )
                 }
