@@ -76,7 +76,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                     //onSubmitEditing={}
                 />
                 {
-                    (img.length > 0 && !tempUri)&&(
+                    (img?.length > 0 && !tempUri)&&(
                         <Image
                             source={{uri:img}}
                             style={{
