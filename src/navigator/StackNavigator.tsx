@@ -18,13 +18,15 @@ export const StackNavigator = () => {
     <Stack.Navigator
         screenOptions={{
           headerShown:false,
-
+          cardStyle:{backgroundColor:'transparent',flex:1}
         }}
     >
     {
       (status !=='autheticated')
       ?(
+        <>
           <Stack.Screen name="Home" component={LogginScreen} />
+        </>
       )
       :(
           <>

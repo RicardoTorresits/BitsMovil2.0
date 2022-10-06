@@ -14,7 +14,7 @@ import { MonoComponent } from '../components/MonoComponent';
 
 
 export const LogginScreen = () => {
-  const {top} =useSafeAreaInsets();
+
 
   const {AuthLogin} = useContext(AuthContext)
 
