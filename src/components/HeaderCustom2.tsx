@@ -9,7 +9,7 @@ import { Contact } from './Contact';
 
 interface Props extends DrawerScreenProps <any, any>{};
 
-export const HeaderCustom2 = (props:any) => {
+export const HeaderCustom2 = ({navigation,props}:any,) => {
     const {top} = useSafeAreaInsets();
 
     const filtrado = (e:any) =>{
@@ -24,7 +24,20 @@ export const HeaderCustom2 = (props:any) => {
     }
 
     return (
-            <View style={{...styles.container}}>
+            <View 
+                style={{
+                    ...styles.container,
+                    shadowColor: "#000",
+                    shadowOffset: {
+                        width: 0,
+                        height: 4,
+                    },
+                    shadowOpacity: 0.30,
+                    shadowRadius: 4.65,
+
+                    elevation: 8,
+                }}
+            >
                 <View style={{...styles.subContianer}}>
                     <TouchableOpacity 
                         style={styles.DraweButton}
@@ -40,7 +53,9 @@ export const HeaderCustom2 = (props:any) => {
                         Contacts
                     </Text>
 
-                    <TouchableOpacity style={styles.IconContainer}>
+                    <TouchableOpacity style={styles.IconContainer}
+                        onPress={() => {navigation.navigate('NotificaconScreen')}}
+                    >
                         <Image
                             source={require('../assets/Notifications.png')}
                             style={styles.Icon}
@@ -62,6 +77,7 @@ export const HeaderCustom2 = (props:any) => {
                             top:-38,
                             width:25
                         }}
+                        
                     >
                         <Image
                             source={require('../assets/Search.png')}

@@ -8,9 +8,12 @@ import { AuthContext } from '../context/authContext/AuthContext';
 import { Contacs, Datum } from '../interface/ContactInterface';
 import { styles } from '../theme/ContactTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { StackScreenProps } from '@react-navigation/stack';
+
+interface Props extends StackScreenProps<any, any> {};
 
 
-export const ContactsScreen = () => {
+export const ContactsScreen = ({navigation,route}:Props) => {
 
   const {top,bottom} = useSafeAreaInsets()
   const {height}=useWindowDimensions();
@@ -26,7 +29,6 @@ export const ContactsScreen = () => {
   const load = async () => {
     let respuesta = await bitsApi.get(`/contacts/?id=${user.idUsuarioRespuesta}`)
     setInitialData(respuesta.data.result)
-    console.log(respuesta.data.result)
   }
 
   useEffect(() => {
@@ -47,7 +49,6 @@ const addFavorite = async (idUser:string, idFavorite:number ) => {
         idUser,
         idFavorite
     }); 
-    console.log(resp.data)
     load()
 }
 
@@ -57,7 +58,6 @@ const deleteavorite = async (idUser:string, idFavorite:number ) => {
         idUser,
         idFavorite
     }); 
-    console.log(resp.data)
     load()
 }
 
@@ -88,7 +88,7 @@ const deleteavorite = async (idUser:string, idFavorite:number ) => {
 
   return (
     <View style={{top:top}}>
-      <HeaderCustom2 setContacts={setContacts} Contacts={Contacts} Filter={Filter} button={button}/>
+      <HeaderCustom2 setContacts={setContacts} Contacts={Contacts} Filter={Filter} button={button} navigation={navigation} route={route}/>
       <View
         style={styles.buttonContainer}
       >

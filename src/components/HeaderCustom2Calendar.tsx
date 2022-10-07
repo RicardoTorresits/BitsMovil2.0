@@ -1,13 +1,29 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from '../theme/HeaderCustomTheme';
 
-export const HeaderCustom2Calendar = () => {
+interface Props extends StackScreenProps<any, any> {};
+
+export const HeaderCustom2Calendar = ({navigation}:Props) => {
     const {top} = useSafeAreaInsets();
     return (
         <>
-            <View style={{...styles.container,top:top}}>
+            <View 
+                style={{
+                    ...styles.container,top:top,
+                    shadowColor: "#000",
+                    shadowOffset: {
+                        width: 0,
+                        height: 4,
+                    },
+                    shadowOpacity: 0.30,
+                    shadowRadius: 4.65,
+
+                    elevation: 8,
+                }}
+            >
                 <View style={{...styles.subContianer}}>
                     <TouchableOpacity style={styles.DraweButton}>
                         <Image
@@ -20,7 +36,9 @@ export const HeaderCustom2Calendar = () => {
                         Calendar
                     </Text>
 
-                    <TouchableOpacity style={styles.IconContainer}>
+                    <TouchableOpacity style={styles.IconContainer}
+                        onPress={() => {navigation.navigate('NotificaconScreen')}}
+                    >
                         <Image
                             source={require('../assets/Notifications.png')}
                             style={styles.Icon}

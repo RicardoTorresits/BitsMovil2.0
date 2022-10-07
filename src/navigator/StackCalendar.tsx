@@ -5,18 +5,15 @@ import { LogginScreen } from '../screens/LogginScreen';
 import { ShadowPropTypesIOS, View } from 'react-native';
 import { DrawerNavigation } from './DraweNavigation';
 import { AuthContext } from '../context/authContext/AuthContext';
-import { MyMoodScreen } from '../screens/MyMoodScreen';
-import { MessageMoodScreen } from '../screens/MessageMoodScreen';
-import { StadicticsMoodScreen } from '../screens/StadicticsMoodScreen';
+import { CalendarScreen } from '../screens/CalendarScreen';
 import { NotificaconScreen } from '../screens/NotificaconScreen';
 
-export type RouteStackParams={
-  MessageMoodScreen:{idMyMood: string}
-}
+
+
 
 const Stack = createStackNavigator();
 
-export const StackMymood = () => {
+export const StackCalendar = () => {
   
   return (
     <Stack.Navigator
@@ -25,9 +22,7 @@ export const StackMymood = () => {
         }
       }   
     >
-          <Stack.Screen name="MyMoodScreen" component={MyMoodScreen} />
-          <Stack.Screen name="MessageMoodScreen" component={MessageMoodScreen} />
-          <Stack.Screen name="StadicticsMoodScreen" component={StadicticsMoodScreen} />
+          <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
           <Stack.Screen name="NotificaconScreen" component={NotificaconScreen} />
     </Stack.Navigator>
   );

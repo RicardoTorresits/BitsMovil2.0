@@ -22,7 +22,7 @@ const ArrMood=[
 interface Props extends StackScreenProps<any, any> {};
 
 
-export const MyMoodScreen = ({navigation}:Props) => {
+export const MyMoodScreen = ({navigation,route}:Props) => {
 
   const [modalVisible, setModalVisible] = useState(false)
   const {Nombre} = useContext(AuthContext)
@@ -117,7 +117,7 @@ export const MyMoodScreen = ({navigation}:Props) => {
           </View>
         </Modal>
 
-          <HeaderCustomMood/>
+          <HeaderCustomMood navigation={navigation} route={route}/>
 
           <Text style={styles.title}>
             ¡Hola {Nombre}!

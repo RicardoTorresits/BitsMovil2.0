@@ -5,7 +5,7 @@ import { styles } from '../theme/HeaderCustomTheme';
 
 interface Props extends StackScreenProps<any, any> {};
 
-export const HeaderCustom = ({navigation,route}:Props) => {
+export const HeaderCustom3 = ({navigation,route}:Props) => {
     
 
   return (
@@ -31,17 +31,33 @@ export const HeaderCustom = ({navigation,route}:Props) => {
                     style={styles.Image}
                 />
             </TouchableOpacity>
+            <View
+                style={{ flexDirection:'row'}}
+            >
+                <TouchableOpacity
+                    style={{
+                        height:10,
+                        width:10,
+                        marginRight:25
+                    }}
+                    onPress={() =>{navigation.popToTop()}}
+                >
+                    <Image
+                        source={require('../assets/Back.png')}
+                    />
+                </TouchableOpacity>
+                <Text style={styles.Text}>
+                    Notificaciones
+                </Text>
+            </View>
 
-            <Text style={styles.Text}>
-                Noticias
-            </Text>
-
-            <TouchableOpacity style={styles.IconContainer}
+            <TouchableOpacity 
+                style={{...styles.IconContainer}}
                 onPress={()=> navigation.navigate('NotificaconScreen')}
             >
                 <Image
                     source={require('../assets/Notifications.png')}
-                    style={styles.Icon}
+                    style={{...styles.Icon}}
                 />
 
             </TouchableOpacity>

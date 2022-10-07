@@ -1,10 +1,12 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { Image, StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/CrearNoticiaTheme';
+import { AuthContext } from '../context/authContext/AuthContext';
+
 
 interface Props extends StackScreenProps<any, any> {};
 
@@ -12,6 +14,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
     const {top} = useSafeAreaInsets()
 
     const [tempUri, settempUri] = useState<string>()
+
+    const {Nombre} = useContext(AuthContext)
 
     const {text,onChange,img} = useForm({
         text:'',
@@ -57,7 +61,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                 <Text
                     style={styles.textUser}
                 >
-                    Nico
+                    {Nombre}
                 </Text>
             </View>
             <View style={{width:'100%',marginTop:'4%',height:.5,backgroundColor:'#656565'}}/>

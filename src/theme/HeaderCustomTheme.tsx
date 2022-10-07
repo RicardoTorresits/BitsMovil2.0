@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     IconContainer:{
         width:29,
         height:35,
-        marginTop:13,
+        marginTop:2,
         marginRight:20
     },
     Icon:{

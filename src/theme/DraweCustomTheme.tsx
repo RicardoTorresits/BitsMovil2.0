@@ -14,6 +14,15 @@ export const styles = StyleSheet.create({
         height:90,
         flexDirection:'row',
         alignItems:'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
         
     },
     imageContainer:{
@@ -47,6 +56,15 @@ export const styles = StyleSheet.create({
         height:38,
         width:200,
         marginRight:1,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
         //right:30
     },
     optionsInActive:{
@@ -73,15 +91,21 @@ export const styles = StyleSheet.create({
         marginLeft:10
     },
     buttonContainer:{
-        position:'absolute',
         backgroundColor:'white',
-        //top:(Platform.OS==='ios')?795:750,
-        top:'86%',
+        top:'64%',
         width:'100%',
         height:81,
-        //borderTopRightRadius:100,
         borderTopEndRadius:75,
         justifyContent:'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: -3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 7,
     },
     buttom:{
         flexDirection:'row',
@@ -111,7 +135,7 @@ export const styles = StyleSheet.create({
         fontWeight:'500',
         color:'#558AAC',
         lineHeight:16.41,
-        top:'63%',
+        top:'62%',
         left:'20%'
     }
 });

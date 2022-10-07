@@ -6,16 +6,19 @@ import { CalendarScreen } from '../screens/CalendarScreen';
 import { Image,TouchableOpacity, View} from 'react-native';
 import * as Animatable from 'react-native-animatable'
 import { StackMymood } from './StackMymood';
+import { StackNoticia } from './StackNoticias';
+import { StackCalendar } from './StackCalendar';
+import { StackContac } from './ContacStack';
 
 
 
 
 
 const TabArr=[
-  {route:'Home',IconNameInAvtive:require('../assets/homes.png'),IconNameAvtive:require('../assets/Vector_Bco.png'),component:HomeScreen},
+  {route:'StackNoticia',IconNameInAvtive:require('../assets/homes.png'),IconNameAvtive:require('../assets/Vector_Bco.png'),component:StackNoticia},
   {route:'MyMood',IconNameInAvtive:require('../assets/sentiment_very_satisfiedd.png'),IconNameAvtive:require('../assets/sentiment_very_satisfied_Bco.png'),component:StackMymood},
-  {route:'Contacs',IconNameInAvtive:require('../assets/supervisor_account.png'),IconNameAvtive:require('../assets/supervisor_account_Bco.png'),component:ContactsScreen},
-  {route:'Calendar',IconNameInAvtive:require('../assets/calendar_month.png'),IconNameAvtive:require('../assets/calendar_month_Bco.png'),component:CalendarScreen}
+  {route:'StackContac',IconNameInAvtive:require('../assets/supervisor_account.png'),IconNameAvtive:require('../assets/supervisor_account_Bco.png'),component:StackContac},
+  {route:'StackCalendar',IconNameInAvtive:require('../assets/calendar_month.png'),IconNameAvtive:require('../assets/calendar_month_Bco.png'),component:StackCalendar}
 ]
 
 

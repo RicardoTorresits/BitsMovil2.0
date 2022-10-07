@@ -84,7 +84,6 @@ export const AuthProvider = ({children}:any) => {
                     setNombre(PrimerNombre[0])
                     try {   
                         const resp = await bitsApi.put('/auth/googleApp',{email,nombre})
-                        console.log(resp.data.result)
                         dispatch({
                             type:'singUp',
                             payload:{

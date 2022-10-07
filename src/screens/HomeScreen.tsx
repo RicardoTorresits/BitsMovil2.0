@@ -10,13 +10,13 @@ import { StackScreenProps } from '@react-navigation/stack';
 interface Props extends StackScreenProps<any, any> {};
 
 
-export const HomeScreen = ({navigation}:Props) => {
+export const HomeScreen = ({navigation,route}:Props) => {
 
    const {top} = useSafeAreaInsets()
 
   return (
     <View style={{top:top}}>
-        <HeaderCustom/>
+        <HeaderCustom navigation={navigation} route={route}/>
         <ScrollView>
           <Noticia/>
           <Noticia/>

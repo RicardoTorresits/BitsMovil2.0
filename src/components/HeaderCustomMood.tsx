@@ -1,8 +1,11 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from '../theme/HeaderCustomTheme';
 
-export const HeaderCustomMood = () => {
+interface Props extends StackScreenProps<any, any> {};
+
+export const HeaderCustomMood = ({navigation,route}:Props) => {
   return (
     <View style={{
         ...styles.subContianer,
@@ -20,7 +23,9 @@ export const HeaderCustomMood = () => {
             My Mood
         </Text>
 
-        <TouchableOpacity style={styles.IconContainer}>
+        <TouchableOpacity style={styles.IconContainer}
+            onPress={()=> navigation.navigate('NotificaconScreen')}
+        >
             <Image
                 source={require('../assets/Notifications.png')}
                 style={styles.Icon}
