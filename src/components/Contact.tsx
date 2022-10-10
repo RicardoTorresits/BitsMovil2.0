@@ -1,17 +1,14 @@
-import React, { useContext,useEffect, useState  } from 'react'
+import React, { useContext} from 'react'
 import { Image, View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { styles } from '../theme/ContactTheme';
-import bitsApi from '../api/bitsApi';
 import { AuthContext } from '../context/authContext/AuthContext';
-import { useDebouncedValue } from '../hooks/useDebouncedValue';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 
 
 
 
 export const Contact = (props:any) => { 
     const {item,onPress,accessibilityState} = props
-    const {bottom} = useSafeAreaInsets()
     const focused = accessibilityState
 
     const {user} = useContext(AuthContext)

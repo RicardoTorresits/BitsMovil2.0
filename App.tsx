@@ -5,13 +5,16 @@ import 'react-native-gesture-handler';
 import { StackNavigator } from './src/navigator/StackNavigator';
 import { AuthProvider } from './src/context/authContext/AuthContext';
 import { MoodProvider } from './src/context/myMoodContext/MoodContext';
+import { NoticiasProvider } from './src/context/NoticiaContext/NoticiaContext';
 
 const AppState = ({children}:any) =>{
   return(
     <AuthProvider>
-      <MoodProvider>
-        {children}
-      </MoodProvider>
+      <NoticiasProvider>
+        <MoodProvider>
+          {children}
+        </MoodProvider>
+      </NoticiasProvider>
     </AuthProvider>
   )
 }

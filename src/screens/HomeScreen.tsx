@@ -19,10 +19,7 @@ export const HomeScreen = ({navigation,route}:Props) => {
         <HeaderCustom navigation={navigation} route={route}/>
         <ScrollView>
           <Noticia/>
-          <Noticia/>
-          <Noticia/>
-          <View style={styles.loading}>
-          </View>
+          <View style={styles.loading}/>
         </ScrollView>
         <TouchableOpacity
             style={styles.buttonNoticia}
