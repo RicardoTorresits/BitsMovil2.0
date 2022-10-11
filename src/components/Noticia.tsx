@@ -1,6 +1,8 @@
-import React from 'react'
+import { StackScreenProps } from '@react-navigation/stack';
+import React, { useContext, useEffect } from 'react'
 import { Image, ImageBackground, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import { styles } from '../theme/NoticiasTheme'
+import { NoticiasContext } from '../context/NoticiaContext/NoticiaContext';
 
 
 const ArrReaccion=[
@@ -9,7 +11,16 @@ const ArrReaccion=[
     {Icon:require('../assets/favorite_border.png'),idReaccion:'3'}
 ]
 
-export const Noticia = () => {
+interface Props extends StackScreenProps<any, any> {};
+
+export const Noticia = ({navigation,route}:Props) => {
+
+    const {dataNoticia,getNoticias} = useContext(NoticiasContext)
+
+    useEffect(() => {
+     getNoticias()
+    }, [])
+
   return (
 
         <View

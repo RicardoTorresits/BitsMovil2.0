@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/CrearNoticiaTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
+import { NoticiasContext } from '../context/NoticiaContext/NoticiaContext';
 
 
 interface Props extends StackScreenProps<any, any> {};
@@ -16,6 +17,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
     const [tempUri, settempUri] = useState<string>()
 
     const {Nombre} = useContext(AuthContext)
+
+    const {sendNoticias} = useContext(NoticiasContext)
 
     const {text,onChange,img} = useForm({
         text:'',
@@ -139,6 +142,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={{...styles.Button,backgroundColor:'#FABB00'}}
+                        onPress={sendNoticias}
                     >
                         <Text style={{...styles.ButtonText,color:'#FFFFFF'}}>
                             Publicar

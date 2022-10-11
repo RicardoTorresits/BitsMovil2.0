@@ -52,7 +52,7 @@ export const MessageMoodScreen = ({navigation,route}:Props,) => {
     <View
       style={{top:top,alignItems:'center',flex:1,width:'100%'}}
     >
-      <HeaderCustomMood/>
+      <HeaderCustomMood navigation={navigation} route={route}/>
       <View style={{justifyContent:'center',alignItems:'center'}}>
         <View
           style={{

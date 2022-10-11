@@ -118,17 +118,14 @@ const deleteavorite = async (idUser:string, idFavorite:number ) => {
           </Text>
         </TouchableOpacity>
       </View>
-
-          <Contact 
-            Contacts={Contacts} 
-            addFavorite={addFavorite} 
-            deleteavorite={deleteavorite} 
-            button={button}
-          />
-          
-
-        
-
+          <View>
+            <Contact 
+              Contacts={Contacts} 
+              addFavorite={addFavorite} 
+              deleteavorite={deleteavorite} 
+              button={button}
+            />
+          </View>
     </View>
   )
 }
