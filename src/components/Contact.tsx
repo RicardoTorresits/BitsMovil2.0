@@ -32,7 +32,7 @@ export const Contact = (props:any) => {
                     !focused
                         ?<TouchableOpacity
                             onPress={onPress}
-                            style={{marginBottom:'2%'}}
+                            style={{marginBottom:'3%'}}
                         >
                         <View style={{...styles.cardContainer}}>
                             <Image
