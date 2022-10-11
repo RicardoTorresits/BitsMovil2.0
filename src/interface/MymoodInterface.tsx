@@ -14,7 +14,7 @@ export interface Enviado {
 
 
 export interface DataGrafic {
-    result: Result;
+    result: Result[];
 }
 
 export interface Result {

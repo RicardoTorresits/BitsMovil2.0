@@ -28,7 +28,7 @@ export const ContactsScreen = ({navigation,route}:Props) => {
 
   const load = async () => {
     let respuesta = await bitsApi.get(`/contacts/?id=${user.idUsuarioRespuesta}`)
-    setInitialData(respuesta.data.result)
+    setInitialData(respuesta.data.data)
   }
 
   useEffect(() => {
@@ -53,7 +53,6 @@ const addFavorite = async (idUser:string, idFavorite:number ) => {
 }
 
 const deleteavorite = async (idUser:string, idFavorite:number ) => {
-    console.log(idFavorite,idUser)
     const resp = await bitsApi.post ('/contacts/delete',{
         idUser,
         idFavorite

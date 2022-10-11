@@ -30,7 +30,7 @@ export const MoodProvider = ({children}:any) => {
             idMyMood,
             Comentario
         });
-        console.log(resp.data)
+        console.log(resp.data.result)
 
     }
 
@@ -41,7 +41,7 @@ export const MoodProvider = ({children}:any) => {
 
     const ViewGrafic = async() => {
         const resp =  await bitsApi.get(`/myMood/estadisticas/?idUsuario=${user.idUsuarioRespuesta}`);
-        setPerision(resp.data.result.Enviadas)
+        setPerision(resp.data.result[0].Enviadas)
         console.log(Perision)
     }
 

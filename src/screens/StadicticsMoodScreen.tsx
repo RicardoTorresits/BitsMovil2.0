@@ -11,7 +11,7 @@ import { MoodContext } from '../context/myMoodContext/MoodContext';
 
 interface Props extends StackScreenProps<any, any> {};
 
-export const StadicticsMoodScreen = ({navigation}:Props) => {
+export const StadicticsMoodScreen = ({navigation,route}:Props) => {
   
   const {top}=useSafeAreaInsets()
 
@@ -26,7 +26,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
     <View
       style={{top:top,alignItems:'center',flex:1,width:'100%'}}
     >
-        <HeaderCustomMood/>
+        <HeaderCustomMood navigation={navigation} route={route}/>
 
         <Text style={styles.Text}>
           Tu comentario se ha enviado con éxito
@@ -54,11 +54,11 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <VictoryPie
                   colorScale={["#367EEA","#42DBBE","#9C54E5", "#FEC104","#FB337B"]}
                   data={[
-                    { y: dataMood?.result.Motivados, },
-                    { y: dataMood?.result.Productivos },
-                    { y: dataMood?.result.Aburridos },
-                    { y: dataMood?.result.Presionados },
-                    { y: dataMood?.result.Enfadados }
+                    { y: dataMood?.result[0].Motivados, },
+                    { y: dataMood?.result[0].Productivos },
+                    { y: dataMood?.result[0].Aburridos },
+                    { y: dataMood?.result[0].Presionados },
+                    { y: dataMood?.result[0].Enfadados }
                    ]}
                   
                   width={300}
@@ -75,7 +75,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                     fontWeight:'700'
                   }}
                 >
-                  {dataMood?.result.Totales}
+                  {dataMood?.result[0].Totales}
                 </Text>
                 <Text
                   style={{
@@ -111,7 +111,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <Text
                   style={styles.moodNumber}
                 >
-                  {dataMood?.result.Motivados}
+                  {dataMood?.result[0].Motivados}
                 </Text>
 
 
@@ -139,7 +139,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <Text
                   style={styles.moodNumber}
                 >
-                  {dataMood?.result.Productivos}
+                  {dataMood?.result[0].Productivos}
                 </Text>
 
               </View>
@@ -166,7 +166,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <Text
                   style={styles.moodNumber}
                 >
-                  {dataMood?.result.Aburridos}
+                  {dataMood?.result[0].Aburridos}
                 </Text>
 
               </View>
@@ -193,7 +193,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <Text
                   style={styles.moodNumber}
                 >
-                  {dataMood?.result.Presionados}
+                  {dataMood?.result[0].Presionados}
                 </Text>
 
               </View>
@@ -217,7 +217,7 @@ export const StadicticsMoodScreen = ({navigation}:Props) => {
                 <Text
                   style={styles.moodNumber}
                 >
-                  {dataMood?.result.Enfadados}
+                  {dataMood?.result[0].Enfadados}
                 </Text>
 
               </View>
