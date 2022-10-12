@@ -40,7 +40,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             type:'image/png'
           }
           console.log(file)
-          //settempUri(resp.assets[0].uri)
+          settempUri(resp.assets[0].uri)
         });
       }
 
@@ -57,7 +57,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             type:'image/png'
           }
           console.log(file)
-          //settempUri(resp.assets[0].uri)
+          settempUri(resp.assets[0].uri)
         });
       }
 
