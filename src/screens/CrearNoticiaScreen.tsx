@@ -76,6 +76,18 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             type:'image/png'
           }
           console.log(file)
+          const option ={
+            keyPrefix:'ArchivoRespuesta /',
+            bucket:'bits-qa-datos-candidatos',
+            region:'us-east-2',
+            accessKey:'AKIAVTRU4YY4NCWJ5TCD',
+            secretKey:'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',
+            successActionStatus:201,
+          }
+          RNS3.put(file,option)
+          .then((response)=>{
+            setAws(response.body.postResponse.location.uri)
+            console.log(aws)
           settempUri(resp.assets[0].uri)
         });
       }
