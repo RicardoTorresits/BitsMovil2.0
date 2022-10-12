@@ -2,6 +2,7 @@ import { StackScreenProps } from '@react-navigation/stack';
 import React, { useState,useContext } from 'react'
 import { Image, StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import { RNS3 } from 'react-native-aws3';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/CrearNoticiaTheme';
@@ -33,7 +34,13 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
-          settempUri(resp.assets[0].uri)
+          const file={
+            uri:resp.assets[0].uri,
+            name:resp.assets[0].fileName,
+            type:'image/png'
+          }
+          console.log(file)
+          //settempUri(resp.assets[0].uri)
         });
       }
 
@@ -44,7 +51,13 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
-          settempUri(resp.assets[0].uri)
+          const file={
+            uri:resp.assets[0].uri,
+            name:resp.assets[0].fileName,
+            type:'image/png'
+          }
+          console.log(file)
+          //settempUri(resp.assets[0].uri)
         });
       }
 

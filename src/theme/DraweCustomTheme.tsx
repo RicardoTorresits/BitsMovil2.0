@@ -91,11 +91,11 @@ export const styles = StyleSheet.create({
         marginLeft:10
     },
     buttonContainer:{
-        position:'absolute',
+        //position:'absolute',
         backgroundColor:'white',
-        top:'87%',
+        top:'63%',
         width:'100%',
-        height:'10%',
+        height:'11%',
         borderTopEndRadius:75,
         shadowColor: "#000",
         shadowOffset: {
@@ -134,12 +134,12 @@ export const styles = StyleSheet.create({
         top:470,
     },
     avisoDePrivacidad:{
-        position:'absolute',
+        //position:'absolute',
         fontSize:14,
         fontWeight:'500',
         color:'#558AAC',
         lineHeight:16.41,
-        top:'83%',
+        top:'61%',
         left:'20%'
     }
 });
