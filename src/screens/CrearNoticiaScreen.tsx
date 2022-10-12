@@ -41,12 +41,12 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           console.log(file)
           const option ={
-            keyPrefix:'s3/',
+            keyPrefix:'ArchivoRespuesta /',
             bucket:'bits-qa-datos-candidatos',
             region:'us-east-2',
-            accesskey:'AKIAVTRU4YY4NCWJ5TCD',
-            secretkey:'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',
-            successActionStatus:201
+            accessKey:'AKIAVTRU4YY4NCWJ5TCD',
+            secretKey:'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',
+            successActionStatus:201,
           }
           RNS3.put(file,option)
           .then((response)=>{
