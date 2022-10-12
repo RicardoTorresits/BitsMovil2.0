@@ -21,7 +21,7 @@ export const NoticiasProvider = ({children}:any) => {
 
     const sendNoticias = async(idUser:string,Archivo:string,Descripcion:string) => {
         const resp = await bitsApi.post('/publicaciones',{
-            idUser,
+            idUser:user.idUsuarioRespuesta,
             Archivo,
             Descripcion
         });

@@ -17,6 +17,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
 
     const [tempUri, settempUri] = useState<string>()
 
+    const [aws, setAws] = useState<string>()
+
     const {Nombre} = useContext(AuthContext)
 
     const {sendNoticias} = useContext(NoticiasContext)
@@ -24,7 +26,11 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
     const {text,onChange,img} = useForm({
         text:'',
         img:''
-      });
+    });
+
+    const sendNoticia = () =>{
+
+    }
 
 
     const takePhoto = () => {
@@ -50,7 +56,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            console.log(response)
+            setAws(response.body.postResponse.location)
+            console.log(aws)
           })
           settempUri(resp.assets[0].uri)
         });
