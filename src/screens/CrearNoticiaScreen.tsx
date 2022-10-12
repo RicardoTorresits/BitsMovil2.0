@@ -56,7 +56,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            setAws(response.body.postResponse.location)
+            setAws(response.body.postResponse.location.uri)
             console.log(aws)
           })
           settempUri(resp.assets[0].uri)
@@ -75,7 +75,6 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             name:resp.assets[0].fileName,
             type:'image/png'
           }
-          console.log(file)
           const option ={
             keyPrefix:'ArchivoRespuesta /',
             bucket:'bits-qa-datos-candidatos',
