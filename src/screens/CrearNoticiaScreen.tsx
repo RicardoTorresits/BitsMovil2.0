@@ -61,9 +61,9 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           })
           settempUri(resp.assets[0].uri)
         });
-      }
+    }
 
-      const takePhotoFromGalery = () => {
+    const takePhotoFromGalery = () => {
         launchImageLibrary({
           mediaType:'photo',
           quality:0.5
@@ -75,6 +75,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             name:resp.assets[0].fileName,
             type:'image/png'
           }
+          console.log(file)
           const option ={
             keyPrefix:'ArchivoRespuesta /',
             bucket:'bits-qa-datos-candidatos',
@@ -87,9 +88,12 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           .then((response)=>{
             setAws(response.body.postResponse.location.uri)
             console.log(aws)
+          })
           settempUri(resp.assets[0].uri)
         });
-      }
+    }
+
+    
 
   return (
     <View style={[styles.containerMaster,top>0?{top:top+5}:{top:35}]}>
