@@ -40,6 +40,18 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             type:'image/png'
           }
           console.log(file)
+          const option ={
+            keyPrefix:'s3/',
+            bucket:'bits-qa-datos-candidatos',
+            region:'us-east-2',
+            accesskey:'AKIAVTRU4YY4NCWJ5TCD',
+            secretkey:'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',
+            successActionStatus:201
+          }
+          RNS3.put(file,option)
+          .then((response)=>{
+            console.log(response)
+          })
           settempUri(resp.assets[0].uri)
         });
       }
