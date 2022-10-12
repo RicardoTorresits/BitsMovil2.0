@@ -77,7 +77,7 @@ export const styles = StyleSheet.create({
         justifyContent:'center',
         alignContent:'center',
         alignItems:'center',
-        top:'75%',
+        top:'73%',
         left:'80%',
         shadowColor: "#000",
         shadowOffset: {

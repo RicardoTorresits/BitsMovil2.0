@@ -19,7 +19,7 @@ export const Contact = (props:any) => {
 
   return (
     <View
-        style={{alignItems:'center',height:'75%',justifyContent:'center'}}
+        style={{alignItems:'center',height:'73%',justifyContent:'center'}}
     >
         <FlatList
             data={props.Contacts}
@@ -32,7 +32,7 @@ export const Contact = (props:any) => {
                     !focused
                         ?<TouchableOpacity
                             onPress={onPress}
-                            style={{marginBottom:'3%'}}
+                            style={{marginBottom:'1%'}}
                         >
                         <View style={{...styles.cardContainer}}>
                             <Image

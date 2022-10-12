@@ -50,7 +50,7 @@ export const HeaderCustom2 = ({navigation,props}:any,) => {
                     </TouchableOpacity>
 
                     <Text style={styles.Text}>
-                        Contacts
+                        Contactos
                     </Text>
 
                     <TouchableOpacity style={styles.IconContainer}

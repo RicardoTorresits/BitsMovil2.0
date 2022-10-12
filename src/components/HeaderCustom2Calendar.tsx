@@ -33,7 +33,7 @@ export const HeaderCustom2Calendar = ({navigation}:Props) => {
                     </TouchableOpacity>
 
                     <Text style={styles.Text}>
-                        Calendar
+                        Calendario
                     </Text>
 
                     <TouchableOpacity style={styles.IconContainer}

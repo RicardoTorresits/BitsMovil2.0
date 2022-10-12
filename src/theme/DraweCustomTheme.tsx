@@ -91,12 +91,12 @@ export const styles = StyleSheet.create({
         marginLeft:10
     },
     buttonContainer:{
+        position:'absolute',
         backgroundColor:'white',
-        top:'64%',
+        top:'87%',
         width:'100%',
-        height:81,
+        height:'10%',
         borderTopEndRadius:75,
-        justifyContent:'center',
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -109,8 +109,11 @@ export const styles = StyleSheet.create({
     },
     buttom:{
         flexDirection:'row',
-        marginLeft:30,
-        borderTopEndRadius:50
+        alignItems:'center',
+        justifyContent:'center',
+        //backgroundColor:'red',
+        width:'100%',
+        height:'100%'
     },
     icon:{
         width:30,
@@ -131,11 +134,12 @@ export const styles = StyleSheet.create({
         top:470,
     },
     avisoDePrivacidad:{
+        position:'absolute',
         fontSize:14,
         fontWeight:'500',
         color:'#558AAC',
         lineHeight:16.41,
-        top:'62%',
+        top:'83%',
         left:'20%'
     }
 });
