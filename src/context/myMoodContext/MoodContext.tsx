@@ -41,7 +41,7 @@ export const MoodProvider = ({children}:any) => {
 
     const ViewGrafic = async() => {
         const resp =  await bitsApi.get(`/myMood/estadisticas/?idUsuario=${user.idUsuarioRespuesta}`);
-        setPerision(resp.data.result[0].Enviadas)
+        setPerision(resp.data.result.Enviadas)
         console.log(Perision)
     }
 

@@ -28,7 +28,7 @@ export const ContactsScreen = ({navigation,route}:Props) => {
 
   const load = async () => {
     let respuesta = await bitsApi.get(`/contacts/?id=${user.idUsuarioRespuesta}`)
-    setInitialData(respuesta.data.data)
+    setInitialData(respuesta.data.result)
   }
 
   useEffect(() => {

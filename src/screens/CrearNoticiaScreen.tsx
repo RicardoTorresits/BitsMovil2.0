@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useState,useContext } from 'react'
-import { Image, StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import { RNS3 } from 'react-native-aws3';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -17,19 +17,28 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
 
     const [tempUri, settempUri] = useState<string>()
 
-    const [aws, setAws] = useState<string>()
+    const [aws, setAws] = useState()
 
     const {Nombre} = useContext(AuthContext)
 
     const {sendNoticias} = useContext(NoticiasContext)
 
+    const {user} = useContext(AuthContext)
+
     const {text,onChange,img} = useForm({
         text:'',
-        img:''
+        img:aws
     });
 
     const sendNoticia = () =>{
-
+        const img = aws
+        sendNoticias(
+            user.idUsuarioRespuesta,            
+            text,
+            img,
+        )
+        Keyboard.dismiss();
+        navigation.popToTop()
     }
 
 
@@ -41,7 +50,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
           const file={
-            uri:resp.assets[0].uri,
+            uri:tempUri!,
             name:resp.assets[0].fileName,
             type:'image/png'
           }
@@ -55,7 +64,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            setAws(response.body.postResponse.location)
+            setAws(response)
             console.log(aws)
           })
           settempUri(resp.assets[0].uri)
@@ -70,7 +79,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
           const file={
-            uri:resp.assets[0].uri,
+            uri:tempUri!,
             name:resp.assets[0].fileName,
             type:'image/png'
           }
@@ -84,6 +93,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
+            console.log(response.body.postResponse.location)
             setAws(response.body.postResponse.location)
             console.log(aws)
           })
@@ -126,21 +136,8 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                     maxLength={10000}
                     onChangeText={(value)=> {onChange(value,'text')}}
                     value={text}
-                    //onSubmitEditing={}
+                    onSubmitEditing={sendNoticia}
                 />
-                {
-                    (img.length > 0 && !tempUri)&&(
-                        <Image
-                            source={{uri:img}}
-                            style={{
-                                width:'100%',
-                                height:500,
-                                alignItems:'center',
-                                marginTop:10
-                            }}
-                        />
-                    )
-                }
                 {
                     (tempUri) && (
                         <Image
@@ -187,7 +184,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={{...styles.Button,backgroundColor:'#FABB00'}}
-                        onPress={sendNoticias}
+                        onPress={()=>sendNoticia()}
                     >
                         <Text style={{...styles.ButtonText,color:'#FFFFFF'}}>
                             Publicar

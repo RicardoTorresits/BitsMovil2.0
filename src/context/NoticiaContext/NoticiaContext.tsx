@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useState } from 'react'
 import bitsApi from '../../api/bitsApi';
 import { AuthContext } from '../authContext/AuthContext';
+import { Noticia } from '../../interface/Publicaciones';
 
 
 
 type NoticiasProps={
     dataNoticia:any;
-    sendNoticias: (idUser:string,Archivo:string,Descripcion:string) => Promise<void>;
+    sendNoticias: (idUsuario:string,Descripcion:string,Archivo:string) => Promise<void>;
     getNoticias:() => Promise<void>;
 }
 
@@ -14,22 +15,28 @@ export const NoticiasContext = createContext({} as NoticiasProps)
 
 export const NoticiasProvider = ({children}:any) => {
 
-    const {user} = useContext(AuthContext)
-
-    const [dataNoticia, setDataNoticia] = useState()
+    const [dataNoticia, setDataNoticia] = useState<Noticia[]>([])
 
 
-    const sendNoticias = async(idUser:string,Archivo:string,Descripcion:string) => {
-        const resp = await bitsApi.post('/publicaciones',{
-            idUser:user.idUsuarioRespuesta,
-            Archivo,
-            Descripcion
-        });
-        console.log(resp.data.result)
+    const sendNoticias = async(idUsuario:string,Descripcion:string,Archivo:string) => {
+
+        try {
+            const resp = await bitsApi.post('/publicaciones',{
+                idUsuario,
+                Descripcion,
+                Archivo
+            });
+            console.log(resp.data.result)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const getNoticias = async() =>{
-        
+        const resp = await bitsApi.get('/publicaciones')
+            setDataNoticia(resp.data)
+            console.log(dataNoticia)
+
     }
   
     return(

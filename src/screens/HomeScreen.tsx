@@ -13,9 +13,14 @@ interface Props extends StackScreenProps<any, any> {};
 
 export const HomeScreen = ({navigation,route}:Props) => {
 
-   const {top} = useSafeAreaInsets()
+  const {top} = useSafeAreaInsets()
 
-    const {dataNoticia} = useContext(NoticiasContext)
+  const {dataNoticia,getNoticias} = useContext(NoticiasContext)
+
+  useEffect(() => {
+    getNoticias()
+  }, [!dataNoticia])
+  
    
 
   return (
