@@ -47,7 +47,8 @@ export const styles = StyleSheet.create({
     containePublicacion:{
         justifyContent:'center',
         alignContent:'center',
-        alignItems:'center',
+        //alignItems:'center',
+        //textAlign:'rigth'
         //paddingHorizontal:'3%',
     },
     CotainerButtons:{
