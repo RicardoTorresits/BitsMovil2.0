@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
         backgroundColor:'#F7B801',
         width:45,
         height:45,
-        top:'75%',
+        top:'87%',
         left:'85%',
         shadowColor: "#000",
         shadowOffset: {

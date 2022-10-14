@@ -9,5 +9,6 @@ export interface Result {
     imagenUsuario: string;
     Descripcion:   string;
     Archivo:       string;
-    fecha:         null | string;
+    fecha:         string;
 }
+

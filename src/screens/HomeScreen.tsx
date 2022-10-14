@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { HeaderCustom } from '../components/HeaderCustom'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Noticia } from '../components/Noticia';
@@ -24,12 +24,9 @@ export const HomeScreen = ({navigation,route}:Props) => {
    
 
   return (
-    <View style={{top:top}}>
+    <View style={{top:top,flex:1}}>
         <HeaderCustom navigation={navigation} route={route}/>
-        <ScrollView>
-          <Noticia navigation={navigation} route={route}/>
-          <View style={styles.loading}/>
-        </ScrollView>
+        <Noticia navigation={navigation} route={route} dataNoticia={dataNoticia} />
         <TouchableOpacity
             style={styles.buttonNoticia}
             onPress={() => navigation.navigate('CrearNoticiaScreen')}
