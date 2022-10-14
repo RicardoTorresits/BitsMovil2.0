@@ -8,7 +8,7 @@ export interface Result {
     Nombre:        string;
     imagenUsuario: string;
     Descripcion:   string;
-    Archivo:       string;
+    Archivo?:       string;
     fecha:         string;
 }
 

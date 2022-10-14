@@ -58,11 +58,13 @@ export const Noticia = (props:any) => {
                         {
                             (item.Archivo)
                             &&
+                            (
                                 <Image
                                     style={{...styles.imageNoticias,borderRadius:15}}
                                     source={{uri:item.Archivo}}
-                                    resizeMode='stretch'
+                                    resizeMode='cover'
                                 />
+                            )
                         }
                     </View>
                     <View
