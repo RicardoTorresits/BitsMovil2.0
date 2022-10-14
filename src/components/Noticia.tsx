@@ -55,11 +55,15 @@ export const Noticia = (props:any) => {
                         <Text style={styles.textNoticia}>
                             {item.Descripcion}
                         </Text>
-                        <Image
-                            style={{...styles.imageNoticias,borderRadius:15}}
-                            source={{uri:item.Archivo}}
-                            //resizeMode='stretch'
-                        />
+                        {
+                            (item.Archivo)
+                            &&
+                                <Image
+                                    style={{...styles.imageNoticias,borderRadius:15}}
+                                    source={{uri:item.Archivo}}
+                                    resizeMode='stretch'
+                                />
+                        }
                     </View>
                     <View
                         style={styles.CotainerButtons}
