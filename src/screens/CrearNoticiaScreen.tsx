@@ -64,7 +64,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            setAws(response)
+            setAws(response.body.postResponse.location)
             console.log(aws)
           })
           settempUri(resp.assets[0].uri)
