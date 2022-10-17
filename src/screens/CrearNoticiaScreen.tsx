@@ -66,7 +66,6 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            console.log(response.body.postResponse.location)
             setAws(response.body.postResponse.location)
           })
           
@@ -96,7 +95,6 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
-            console.log(response.body.postResponse.location)
             setAws(response.body.postResponse.location)
             console.log(aws)
           })
