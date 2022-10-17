@@ -17,7 +17,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
 
     const [tempUri, settempUri] = useState<string>()
 
-    const [aws, setAws] = useState()
+    const [aws, setAws] = useState('')
 
     const {Nombre} = useContext(AuthContext)
 
@@ -49,13 +49,15 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
+          settempUri(resp.assets[0].uri)
           const file={
-            uri:tempUri!,
+            uri:resp.assets[0].uri,
             name:resp.assets[0].fileName,
             type:'image/png'
           }
+          console.log(file.uri)
           const option ={
-            keyPrefix:'ArchivoRespuesta /',
+            keyPrefix:'ArchivoRespuesta/',
             bucket:'bits-qa-datos-candidatos',
             region:'us-east-2',
             accessKey:'AKIAVTRU4YY4NCWJ5TCD',
@@ -64,9 +66,10 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
+            console.log(response.body.postResponse.location)
             setAws(response.body.postResponse.location)
           })
-          settempUri(resp.assets[0].uri)
+          
         });
     }
 
@@ -77,13 +80,14 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
         }, (resp:any) =>{
           if (resp.didCancel) return
           if(!resp.assets[0].uri) return
+          settempUri(resp.assets[0].uri)
           const file={
-            uri:tempUri!,
+            uri:resp.assets[0].uri,
             name:resp.assets[0].fileName,
             type:'image/png'
           }
           const option ={
-            keyPrefix:'ArchivoRespuesta /',
+            keyPrefix:'ArchivoRespuesta/',
             bucket:'bits-qa-datos-candidatos',
             region:'us-east-2',
             accessKey:'AKIAVTRU4YY4NCWJ5TCD',
@@ -92,9 +96,10 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
           }
           RNS3.put(file,option)
           .then((response)=>{
+            console.log(response.body.postResponse.location)
             setAws(response.body.postResponse.location)
+            console.log(aws)
           })
-          settempUri(resp.assets[0].uri)
         });
     }
 
@@ -145,6 +150,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
                             marginTop:20
                         }}
                         />
+                    
                     )
                 }
             </ScrollView>
