@@ -35,7 +35,6 @@ export const NoticiasProvider = ({children}:any) => {
     const getNoticias = async() =>{
         let resp = await bitsApi.get('/publicaciones')
         setDataNoticia(resp.data.result)
-        console.log(dataNoticia)
 
     }
   
