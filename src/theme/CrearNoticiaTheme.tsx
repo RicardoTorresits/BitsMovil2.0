@@ -56,7 +56,8 @@ export const styles = StyleSheet.create({
     },
     textInput:{
         backgroundColor:'#FFFFFF',
-        width:'100%'
+        width:'100%',
+        color:'#303030'
     },
     containerMasterButton:{
         height:'30%',

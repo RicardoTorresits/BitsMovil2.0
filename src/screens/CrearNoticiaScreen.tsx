@@ -21,7 +21,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
 
     const {Nombre} = useContext(AuthContext)
 
-    const {sendNoticias} = useContext(NoticiasContext)
+    const {sendNoticias,getNoticias} = useContext(NoticiasContext)
 
     const {user} = useContext(AuthContext)
 
@@ -39,6 +39,7 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
         )
         Keyboard.dismiss();
         navigation.popToTop()
+        getNoticias();
     }
 
 

@@ -91,10 +91,6 @@ export const Noticia = (props:any) => {
                 </View>
             )}
         >
-
         </FlatList>
-
-
-
   )
 }
