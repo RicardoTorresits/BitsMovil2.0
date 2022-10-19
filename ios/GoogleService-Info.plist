@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn.apps.googleusercontent.com</string>
+	<string>1060099751666-8t1mij20uhitfu1k6ov54ds1csnrd6bf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1060099751666-0ebv025ht3v8si76ma4j9h1obms10sgn</string>
+	<string>com.googleusercontent.apps.1060099751666-8t1mij20uhitfu1k6ov54ds1csnrd6bf</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>1060099751666-m0i2gk3bk9dnfqnirn3tbfismlam0bbl.apps.googleusercontent.com</string>
+	<string>1060099751666-70bp8t5fem0en6a556jspcq5lpmvbi97.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCfJE93nm6JpeCsu1GuKgCLYBhzvm97gS4</string>
 	<key>GCM_SENDER_ID</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.reactjs.native.example.BitsRNCLI</string>
+	<string>com.it-seekers.bits</string>
 	<key>PROJECT_ID</key>
 	<string>itseekers-1582214344227</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1060099751666:ios:0447f39c60d47e9f629a6b</string>
+	<string>1:1060099751666:ios:7a400744b9cb7095629a6b</string>
 	<key>DATABASE_URL</key>
 	<string>https://itseekers-1582214344227.firebaseio.com</string>
 </dict>
