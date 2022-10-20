@@ -10,10 +10,18 @@
       "client_info": {
         "mobilesdk_app_id": "1:1060099751666:android:035d30c6ec190f0b629a6b",
         "android_client_info": {
-          "package_name": "com.bitsrncli"
+          "package_name": "com.itseekers"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1060099751666-70bp8t5fem0en6a556jspcq5lpmvbi97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itseekers",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
         {
           "client_id": "1060099751666-686qlsca12r7pnd5543hrnbs8gaj1d9p.apps.googleusercontent.com",
           "client_type": 3
@@ -50,6 +58,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1060099751666-5c79atpvrbm1tb1vaajkc7nbu4h1o7k6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itseekers",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
         {
           "client_id": "1060099751666-u33alak0sn59ggngbbhg4h3n5rh8v3h8.apps.googleusercontent.com",
           "client_type": 1,

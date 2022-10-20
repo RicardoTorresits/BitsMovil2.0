@@ -1,4 +1,4 @@
-package com.bitsrncli.newarchitecture;
+package com.itseekers.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.bitsrncli.BuildConfig;
-import com.bitsrncli.newarchitecture.components.MainComponentsRegistry;
-import com.bitsrncli.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.itseekers.BuildConfig;
+import com.itseekers.newarchitecture.components.MainComponentsRegistry;
+import com.itseekers.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

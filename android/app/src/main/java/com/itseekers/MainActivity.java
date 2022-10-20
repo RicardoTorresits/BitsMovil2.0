@@ -1,4 +1,5 @@
-package com.bitsrncli;
+//package com.bitsrncli;
+package com.itseekers;
 
 import android.os.Bundle;
 

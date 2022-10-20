@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.bitsrncli",
+    package = "com.itseekers",
 )
 
 android_resource(
     name = "res",
-    package = "com.bitsrncli",
+    package = "com.itseekers",
     res = "src/main/res",
 )
 
