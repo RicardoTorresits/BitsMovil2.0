@@ -14,6 +14,7 @@
 		2FEFA8D950061031A398BC71 /* Pods_BitsRNCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC688A263FA969FE02173D17 /* Pods_BitsRNCLI.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8BBD852B28B3C2E000C9FFD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BBD852A28B3C2DF00C9FFD7 /* GoogleService-Info.plist */; };
+		A6A79FED29071EDA00F870C4 /* Logo_Bits_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A79FEC29071EDA00F870C4 /* Logo_Bits_02.png */; };
 		EC181B925141B4C0D1DD33F9 /* Pods_BitsRNCLI_BitsRNCLITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF33E8B49B16B8DC95747A4 /* Pods_BitsRNCLI_BitsRNCLITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-BitsRNCLI-BitsRNCLITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitsRNCLI-BitsRNCLITests.release.xcconfig"; path = "Target Support Files/Pods-BitsRNCLI-BitsRNCLITests/Pods-BitsRNCLI-BitsRNCLITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B2802D328AC03D8000B9361 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		8BBD852A28B3C2DF00C9FFD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A6A79FEC29071EDA00F870C4 /* Logo_Bits_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Bits_02.png; sourceTree = "<group>"; };
 		BC688A263FA969FE02173D17 /* Pods_BitsRNCLI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitsRNCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				A6A79FEC29071EDA00F870C4 /* Logo_Bits_02.png */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A6A79FED29071EDA00F870C4 /* Logo_Bits_02.png in Resources */,
 				8BBD852B28B3C2E000C9FFD7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

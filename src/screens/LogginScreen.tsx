@@ -1,5 +1,5 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Image,Platform, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BackGround } from '../components/BackGround';
@@ -10,11 +10,17 @@ import { styles } from '../theme/LogginTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { LogginEmail } from '../components/LogginEmail';
 import { MonoComponent } from '../components/MonoComponent';
+import SplashScreen from 'react-native-splash-screen';
+
 
 
 
 export const LogginScreen = () => {
 
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [])
+  
 
   const {AuthLogin} = useContext(AuthContext)
 
