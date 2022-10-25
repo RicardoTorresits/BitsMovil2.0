@@ -19,13 +19,13 @@ export const Contact = (props:any) => {
 
   return (
     <View
-        style={{alignItems:'center',height:'73%',justifyContent:'center'}}
+        style={{alignItems:'center',justifyContent:'center'}}
     >
         <FlatList
             data={props.Contacts}
             keyExtractor={(p) => p.idUsuario}
             showsVerticalScrollIndicator={false}
-            style={{}}
+            ListFooterComponent={<View style={{backgroundColor:'rgb(240,240,240)',height:500}}/>}
             renderItem={({item}) =>(
                 <View >
                 {

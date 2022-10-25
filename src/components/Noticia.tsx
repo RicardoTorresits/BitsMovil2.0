@@ -28,6 +28,7 @@ export const Noticia = (props:any) => {
             data={props.dataNoticia}
             keyExtractor={(p)=> p.id }
             showsVerticalScrollIndicator={false}
+            ListFooterComponent={<View style={{backgroundColor:'rgb(240,240,240)',height:100}}/>}
             renderItem={({item})=>(
                 <View
                     style={{...styles.container}}
