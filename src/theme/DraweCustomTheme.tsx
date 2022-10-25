@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     container:{
         flex:1,
         backgroundColor:'#093C5D',
-        
+        alignItems:'flex-start'
     },
     avatarContainer:{
         backgroundColor:'white',
@@ -93,9 +93,11 @@ export const styles = StyleSheet.create({
     buttonContainer:{
         //position:'absolute',
         backgroundColor:'white',
-        top:'63%',
+        justifyContent:'center',
+        top:'65%',
+        //marginTop:600,
         width:'100%',
-        height:'11%',
+        height:'20%',
         borderTopEndRadius:75,
         shadowColor: "#000",
         shadowOffset: {
@@ -108,12 +110,24 @@ export const styles = StyleSheet.create({
         elevation: 7,
     },
     buttom:{
+        position:'absolute',
         flexDirection:'row',
-        alignItems:'center',
+        backgroundColor:'white',
         justifyContent:'center',
-        //backgroundColor:'red',
+        alignItems:'center',
+        //bottom:0,
         width:'100%',
-        height:'100%'
+        height:65.85,
+        borderTopEndRadius:75,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: -3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 7,
     },
     icon:{
         width:30,
@@ -134,12 +148,12 @@ export const styles = StyleSheet.create({
         top:470,
     },
     avisoDePrivacidad:{
-        //position:'absolute',
+        position:'absolute',
         fontSize:14,
         fontWeight:'500',
         color:'#558AAC',
         lineHeight:16.41,
-        top:'61%',
+        bottom:'15%',
         left:'20%'
     }
 });

@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React,{useContext} from 'react';
 import { createDrawerNavigator, DrawerContentComponentProps } from '@react-navigation/drawer';
 import { TabsNavigator } from './TabsNavigator';
 import { View, Text, Image, TouchableOpacity, useWindowDimensions, Platform } from 'react-native';
 import { styles } from '../theme/DraweCustomTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { AuthContext } from '../context/authContext/AuthContext';
 
 const Drawer = createDrawerNavigator();
 
@@ -28,6 +29,8 @@ export const DrawerNavigation = () => {
 
 const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
 
+  const {Nombre} = useContext(AuthContext)
+
   
 
   const {top,bottom} = useSafeAreaInsets();
@@ -35,11 +38,8 @@ const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
 
   return(
     <View style={{
-      flex:1, 
-      backgroundColor:'#093C5D',
-      top:(Platform.OS==='ios')
-        ?top
-        :0
+      ...styles.container,
+      top:top
       }}>
       <View style={{...styles.avatarContainer}}>
           <View style={styles.imageContainer}>
@@ -49,7 +49,7 @@ const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
               />
           </View>
           <Text style={styles.Text}>
-            Nico
+            {Nombre}
           </Text>
       </View>
       <View style={{
@@ -70,19 +70,17 @@ const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
         Aviso de Privacidad
       </Text>
       
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.buttom}>
 
+        <TouchableOpacity style={{...styles.buttom,bottom:0+top}}>
           <Image
             source={require('../assets/logout.png')}
             style={styles.icon}
           />
-
           <Text style={styles.textButtom}>
             Cerrar Sesión
           </Text>
         </TouchableOpacity>
-      </View>
+
     </View>
   )
 
