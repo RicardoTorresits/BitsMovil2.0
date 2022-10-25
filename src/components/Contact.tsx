@@ -19,20 +19,20 @@ export const Contact = (props:any) => {
 
   return (
     <View
-        style={{alignItems:'center',justifyContent:'center'}}
+        style={{alignItems:'center'}}
     >
         <FlatList
             data={props.Contacts}
             keyExtractor={(p) => p.idUsuario}
             showsVerticalScrollIndicator={false}
-            ListFooterComponent={<View style={{backgroundColor:'rgb(240,240,240)',height:500}}/>}
+            ListFooterComponent={<View style={{backgroundColor:'rgb(240,240,240)',height:600,marginTop:10}}/>}
             renderItem={({item}) =>(
-                <View >
+                <View  style={{paddingHorizontal:10}}>
                 {
                     !focused
                         ?<TouchableOpacity
                             onPress={onPress}
-                            style={{marginBottom:'1%'}}
+                            //style={{marginBottom:'1%'}}
                         >
                         <View style={{...styles.cardContainer}}>
                             <Image
