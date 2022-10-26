@@ -20,13 +20,13 @@
                                 <rect key="frame" x="55" y="250" width="264" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 112.png" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Ay-aoQ">
-                                <rect key="frame" x="192" y="0.0" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 108.png" translatesAutoresizingMaskIntoConstraints="NO" id="GQ9-gE-grC">
-                                <rect key="frame" x="-44" y="539" width="240" height="128"/>
+                                <rect key="frame" x="-44" y="539" width="240" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 112.png" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Ay-aoQ">
+                                <rect key="frame" x="196" y="0.0" width="239" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
