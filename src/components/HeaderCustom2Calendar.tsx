@@ -12,7 +12,7 @@ export const HeaderCustom2Calendar = ({navigation}:Props) => {
         <>
             <View 
                 style={{
-                    ...styles.container,top:top,
+                    ...styles.container,
                     shadowColor: "#000",
                     shadowOffset: {
                         width: 0,
