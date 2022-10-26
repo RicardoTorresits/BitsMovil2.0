@@ -29,7 +29,8 @@ export const styles = StyleSheet.create({
         flex:1,
         borderTopStartRadius:50,
         borderTopEndRadius:50,
-        marginTop:10
+        marginTop:10,
+        justifyContent:'center',
     },
     textDate:{
         color:'#FFFFFF',
@@ -39,12 +40,32 @@ export const styles = StyleSheet.create({
         textAlign:'center',
         marginTop:10
     },
-    ContainerDate:{
+    ContainerEvento:{
         backgroundColor:'#FFFFFF',
         flex:1,
         borderTopEndRadius:50,
         borderTopStartRadius:50,
+        marginTop:10,
+    },
+    containerImagen:{
+        width:59,
+        height:59,
+        borderRadius:100,
+        backgroundColor:'#093C5D',
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    textEvento:{
+        color:'#303030',
+        fontSize:14,
+        fontWeight:'500',
+        lineHeight:16.41,
         marginTop:10
+    },
+    textUserEvento:{
+        color:'#303030',
+        fontSize:14,
+        fontWeight:'300',
+        lineHeight:16.41
     }
-    
 });
