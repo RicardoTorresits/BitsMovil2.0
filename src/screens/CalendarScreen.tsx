@@ -4,6 +4,7 @@ import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import { HeaderCustom2Calendar } from '../components/HeaderCustom2Calendar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { styles } from '../theme/CalendarTheme';
+import { CalendarioVacio } from '../components/CalendarioVacio';
 
 
 
@@ -13,7 +14,7 @@ export const CalendarScreen = ({navigation,route}:Props) => {
  const {top} = useSafeAreaInsets()
   const [Evento, setEvento] = useState('cumpleaños')
   return (
-    <View style={{flex:1,top:top}}>
+    <View style={{flex:1,top:top,}}>
         <HeaderCustom2Calendar navigation={navigation} route={route}/>
 
         <View style={{...styles.containerButton}}>
@@ -41,7 +42,7 @@ export const CalendarScreen = ({navigation,route}:Props) => {
             26 de Octubre de 2022
           </Text>
           <View style={{...styles.ContainerEvento,alignContent:'center', alignItems:'center'}}>
-            <View style={{flexDirection:'row', width:'100%',marginTop:10,paddingHorizontal:30}}>
+            {/*<View style={{flexDirection:'row', width:'100%',marginTop:10,paddingHorizontal:30}}>
               <View style={{...styles.containerImagen}}>
                 {
                   (Evento==='aniversario')
@@ -52,14 +53,18 @@ export const CalendarScreen = ({navigation,route}:Props) => {
                   && <Image source={require('../assets/cake.png')} />
                 }
               </View>
-              <View style={{marginHorizontal:20}}>
+              <View style={{marginHorizontal:20,width:'80%',flex:1}}>
                 <Text style={styles.textEvento}>
                   Cumpleaños
                 </Text>
                 <Text style={styles.textUserEvento}>
                   Nicolas claudio
                 </Text>
-              </View>
+            </View>
+            
+              </View>*/}
+            <View style={{width:'100%',height:'100%', justifyContent:'center'}}>
+              <CalendarioVacio/>
             </View>
           </View>
         </View>

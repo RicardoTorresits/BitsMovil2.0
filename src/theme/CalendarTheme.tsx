@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     },
     textEvento:{
         color:'#303030',
-        fontSize:14,
+        fontSize:16,
         fontWeight:'500',
         lineHeight:16.41,
         marginTop:10
@@ -67,5 +67,12 @@ export const styles = StyleSheet.create({
         fontSize:14,
         fontWeight:'300',
         lineHeight:16.41
+    },
+    TextVacio:{
+        fontWeight:'400',
+        fontSize:20.75,
+        lineHeight:24.58,
+        textAlign:'center',
+        marginTop:50,
     }
 });
