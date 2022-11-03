@@ -21,4 +21,7 @@ const bitsApi  = axios.create({
 //);
 
 
-export default bitsApi
+export {
+  baseURL,
+  bitsApi
+}
