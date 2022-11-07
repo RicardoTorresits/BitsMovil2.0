@@ -9,19 +9,25 @@ const bitsApi  = axios.create({
 });
 
 
-//bitsApi.interceptors.request.use(
-    
-  //  async(config:any) => {
-  //      const token = AsyncStorage.getItem('token');
-  //      if (token){
-  //         config.headers['x-token'] = token;
-   //     }
-     //   return config;
-   // }
-//);
+// bitsApi.interceptors.request.use(    
+//     async(config:any) => {
+//         const token = AsyncStorage.getItem('token');
+//         if (token){
+//            config.headers['x-token'] = token         
+//         }
+//         return config;
+//     }
+// );
+
+// bitsApi.interceptors.request.use(
+//   async(config:any)=>{
+//     const baseURL = AsyncStorage.getItem('url');
+//     if(baseURL != baseURL){
+//       config.url=baseURL
+//     }
+//     return config;
+//   }
+// )
 
 
-export {
-  baseURL,
-  bitsApi
-}
+export default bitsApi

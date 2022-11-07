@@ -68,8 +68,9 @@ export const Noticia = (props:any) => {
                             )
                         }
                     </View>
-                    <View
+                    <TouchableOpacity
                         style={styles.CotainerButtons}
+                        onPress={() => {props.navigation.navigate('ReaccionesScreen')}}
                     >
                         <TouchableOpacity style={styles.icon}>
                             <Image
@@ -88,7 +89,7 @@ export const Noticia = (props:any) => {
                                 )
                             })
                         }
-                    </View>
+                    </TouchableOpacity>
                 </View>
             )}
         >

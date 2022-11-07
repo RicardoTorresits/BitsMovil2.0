@@ -7,6 +7,7 @@ import { DrawerNavigation } from './DraweNavigation';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { HomeScreen } from '../screens/HomeScreen';
 import { NotificaconScreen } from '../screens/NotificaconScreen';
+import { ReaccionesScreen } from '../screens/ReaccionesScreen';
 
 
 export type RouteStackParams={
@@ -26,6 +27,7 @@ export const StackNoticia = () => {
     >
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="NotificaconScreen" component={NotificaconScreen} />
+          <Stack.Screen name="ReaccionesScreen" component={ReaccionesScreen}/>
     </Stack.Navigator>
   );
 }
