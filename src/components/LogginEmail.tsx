@@ -4,12 +4,18 @@ import { Image, TouchableOpacity, View, Text, TextInput } from 'react-native';
 import { styles } from '../theme/LogginEmailTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { MonoComponent } from './MonoComponent';
+import { useForm } from '../hooks/useForm';
 
 interface Props extends StackScreenProps<any, any>{}
 
 export const LogginEmail = () => {
 
     const {recoveryAcount,goBackStart,logIn} = useContext(AuthContext)
+
+    const {email,password, onChange}=useForm({
+        email:'',
+        password:''
+    })
 
   return (
     <View style={{...styles.FormContainer}}>
@@ -27,6 +33,8 @@ export const LogginEmail = () => {
                     E-MAIL
                 </Text>
                 <TextInput
+                    onChangeText={(value)=>onChange(value,'email')}
+                    value={email}
                     style={{
                         fontSize:15,
                         backgroundColor:'#FFFFFF',
@@ -54,6 +62,8 @@ export const LogginEmail = () => {
                     CONTRASEÑA
                 </Text>
                 <TextInput
+                    onChangeText={(value)=>onChange(value,'password')}
+                    value={password}
                     style={{
                         fontSize:15,
                         backgroundColor:'#FFFFFF',
