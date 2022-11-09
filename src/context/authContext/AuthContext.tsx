@@ -7,6 +7,7 @@ import {
   } from '@react-native-google-signin/google-signin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import bitsApi from '../../api/bitsApi';
+import appleAuth from '@invertase/react-native-apple-authentication';
 
 
 GoogleSignin.configure({
@@ -26,7 +27,9 @@ type AuthContextProps = {
     recoveryAcount : () => void;
     goBackStart:() => void;
     logIn:() => void;
+    logInEmail:() => void;
     logInGoogle:() => void;
+    logInApple:() => void
     logOut:() => void;
     logInchange:() => void;
     ModalCloseOrOpen:() => void;
@@ -69,6 +72,30 @@ export const AuthProvider = ({children}:any) => {
 
     const ModalCloseOrOpen = () => {
         setModalVisible(!modalVisible)
+    }
+
+    const logInEmail = async () => {
+
+    }
+
+    const logInApple = async () => {
+        try {
+            if(Auth ==='true'){
+                const appleAuthRequestResponse = await appleAuth.performRequest({
+                    requestedOperation:appleAuth.Operation.LOGIN,
+                    requestedScopes:[appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
+                });
+                try {
+                    
+                } catch (error) {
+                    console.log(error)
+                }
+            }else {
+                ModalCloseOrOpen();
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const logInGoogle = async () =>{
@@ -124,6 +151,7 @@ export const AuthProvider = ({children}:any) => {
             logIn,
             logInchange,
             logInGoogle,
+            logInApple,
             logOut,
             ModalCloseOrOpen,
         }}>

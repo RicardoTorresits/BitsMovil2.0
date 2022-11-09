@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
     container:{
         backgroundColor:'#FFFFFF',
         width:'100%',
-        justifyContent:'center',
         alignContent:'center',
         borderRadius:25,
         marginVertical:5,
@@ -101,6 +100,24 @@ export const styles = StyleSheet.create({
     imageButton:{
         width:21.66,
         height:21.66
+    },
+    ContainerComment:{
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#FFFFFF',
+        marginBottom:10,
+        width:'100%',
+
+    },
+    NumberComments:{
+        fontWeight:'500',
+        fontSize:14,
+        lineHeight:16.41
+    },
+    Comments:{
+        fontWeight:'300',
+        fontSize:14,
+        lineHeight:16.41
     }
     
 });

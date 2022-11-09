@@ -2,9 +2,9 @@ import { StackScreenProps } from '@react-navigation/stack';
 import React, { useContext } from 'react'
 import { Image, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { HeaderCustom } from '../components/HeaderCustom';
 import { styles } from '../theme/ReaccionesTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
+import { HeaderCustom4 } from '../components/HeaderCustom4';
 
 interface Props extends StackScreenProps<any, any> {};
 
@@ -16,7 +16,7 @@ export const ReaccionesScreen = ({navigation,route}:Props) => {
 
   return (
     <View style={{top:top,flex:1}}>
-        <HeaderCustom navigation={navigation} route={route}/>
+        <HeaderCustom4 navigation={navigation} route={route}/>
         <View style={styles.container}>
           <View style={styles.containerReacciones}>
             <TouchableOpacity>

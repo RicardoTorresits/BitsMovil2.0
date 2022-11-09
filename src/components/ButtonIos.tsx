@@ -5,12 +5,12 @@ import { AuthContext } from '../context/authContext/AuthContext';
 
 export const ButtonIos = () => {
 
-  const {logIn} = useContext(AuthContext)
+  const {logInApple} = useContext(AuthContext)
 
   return (
     <TouchableOpacity 
       style={styles.button}
-      onPress={logIn}
+      onPress={logInApple}
     >
       <Image
         source={require('../assets/Apple_User_Groups1.png')}

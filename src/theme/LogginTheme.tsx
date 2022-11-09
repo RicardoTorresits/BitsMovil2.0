@@ -68,6 +68,7 @@ export const styles = StyleSheet.create({
     modalContainerMater:{
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0.5)',
+        alignItems:'center'
     },
     modalContainer:{
         backgroundColor:'#FFFFFF',
@@ -76,10 +77,8 @@ export const styles = StyleSheet.create({
         borderRadius:29,
         alignItems:'center',
         justifyContent:'center',
-        alignContent:'center',
         textAlign:'center',
-        top:'45%',
-        left:'8%',
+        top:'45%', 
     },
     modalText:{
         color:'#303030',

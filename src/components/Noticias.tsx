@@ -15,7 +15,7 @@ const ArrReaccion=[
 
 
 
-export const Noticia = (props:any) => {
+export const Noticias = (props:any) => {
     const {getNoticias} = useContext(NoticiasContext)
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export const Noticia = (props:any) => {
             ListFooterComponent={<View style={{backgroundColor:'rgb(240,240,240)',height:100}}/>}
             renderItem={({item})=>(
                 <View
-                    style={{...styles.container}}
+                    style={{...styles.container,justifyContent:'center'}}
                 >
                     <View
                         style={styles.containerUser}
@@ -72,7 +72,10 @@ export const Noticia = (props:any) => {
                         style={styles.CotainerButtons}
                         onPress={() => {props.navigation.navigate('ReaccionesScreen')}}
                     >
-                        <TouchableOpacity style={styles.icon}>
+                        <TouchableOpacity 
+                            style={styles.icon}
+                            onPress={()=>{props.navigation.navigate('NoticiaScreen')}}
+                        >
                             <Image
                                 source={require('../assets/textsms.png')}
                             />
