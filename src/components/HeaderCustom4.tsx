@@ -40,7 +40,7 @@ export const HeaderCustom4 = ({navigation,route}:Props) => {
                         width:10,
                         marginRight:25
                     }}
-                    onPress={() =>{navigation.popToTop()}}
+                    onPress={() =>{navigation.pop()}}
                 >
                     <Image
                         source={require('../assets/Back.png')}

@@ -1,4 +1,4 @@
-import { StyleSheet, ImageBackground } from 'react-native';
+import { StyleSheet, ImageBackground, TextInput } from 'react-native';
 
 export const styles = StyleSheet.create({
 
@@ -112,12 +112,60 @@ export const styles = StyleSheet.create({
     NumberComments:{
         fontWeight:'500',
         fontSize:14,
-        lineHeight:16.41
+        lineHeight:16.41,
+        marginRight:5
     },
     Comments:{
         fontWeight:'300',
         fontSize:14,
         lineHeight:16.41
-    }
+    },
+    modalContainerMater:{
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        alignItems:'center',
+        justifyContent:'flex-end',
+        bottom:'9.8%'
+    },
+    modalContainer:{
+        backgroundColor:'#FFFFFF',
+        width:'100%',
+        height:'50%',
+        borderTopRightRadius:50,
+        borderTopLeftRadius:50,
+        alignItems:'center',
+        justifyContent:'center',
+        textAlign:'center',
+    },
+    containerButton:{
+        flexDirection:'row',
+        width:'100%',
+        justifyContent:'center',
+    },
+    buttonTextModal:{
+        fontWeight:'700',
+        fontSize:16,
+        lineHeight:18.75,
+        
+    },
+    modalButton:{
+        borderWidth:1,
+        marginHorizontal:10,
+        borderRadius:20,
+        width:'30%',
+        height:41.14,
+        alignItems:'center',
+        justifyContent:'center',
+        marginBottom:15
+    },
+    textInput:{
+        flex:1,
+        marginTop:30,
+        fontSize:21,
+        fontWeight:'400',
+        lineHeight:24.61,
+        textAlignVertical:'top'
+    },
+    
     
 });
