@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-evenly',
         marginHorizontal:50,
-        marginTop:20
+        marginTop:20,
+        marginBottom:10
     },
     buttonInActive:{
         backgroundColor:'#093C5D',
@@ -13,7 +14,16 @@ export const styles = StyleSheet.create({
         width:120,
         borderRadius:100,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
     buttonActive:{
         backgroundColor:'#F7B801',
@@ -21,7 +31,16 @@ export const styles = StyleSheet.create({
         width:120,
         borderRadius:100,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
     text:{
         color:'#FFFFFF',

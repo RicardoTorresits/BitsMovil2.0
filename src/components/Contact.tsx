@@ -37,7 +37,7 @@ export const Contact = (props:any) => {
                         <View style={{...styles.cardContainer}}>
                             {
                                 (item.Imagen==='')
-                                    ?<View style={styles.Image}><UserAvatar size={85} name={item.Nombre}/></View>
+                                    ?<View style={styles.Image}><UserAvatar size={85} name={item.Nombre} /></View>
                                     :<Image
                                     style={styles.Image}
                                     source={{uri:item.Imagen}}

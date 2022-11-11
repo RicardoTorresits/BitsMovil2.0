@@ -1,11 +1,13 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Image, Text, TouchableOpacity, View, ScrollView, KeyboardAvoidingView, Modal, TextInput, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { RouteStackParams } from '../navigator/StackMymood';
 import { styles } from '../theme/NoticiasTheme';
 import { HeaderCustom5 } from '../components/HeaderCustom5';
 import { useForm } from '../hooks/useForm';
+import UserAvatar from 'react-native-user-avatar';
+import { AuthContext } from '../context/authContext/AuthContext';
 
 const ArrReaccion=[
   {Icon:require('../assets/Group.png'), idReaccion:'1'},
@@ -20,6 +22,8 @@ export const NoticiaScreen = ({navigation,route}:Props) => {
 
 
   const [modalVisible, setModalVisible] = useState(false)
+
+  const {user} = useContext(AuthContext)
   
   const {text,onChange} = useForm({
     text:'',
@@ -75,10 +79,14 @@ export const NoticiaScreen = ({navigation,route}:Props) => {
           <View
               style={styles.containerUser}
           >
-              <Image
-                  source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
-                  style={styles.image}
+          {
+            (user.imagenRespuesta!=='')
+              ?<View style={styles.image}><UserAvatar size={50} name={user.nombreRespuesta}/></View>
+              :<Image
+                source={{uri:user.imagenRespuesta}}
+                style={styles.image}
               />
+          }
 
               <View style={styles.containerDatos}>
                   <Text style={styles.textTitle}>
