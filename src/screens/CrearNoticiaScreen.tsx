@@ -8,6 +8,7 @@ import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/CrearNoticiaTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { NoticiasContext } from '../context/NoticiaContext/NoticiaContext';
+import UserAvatar from 'react-native-user-avatar';
 
 
 interface Props extends StackScreenProps<any, any> {};
@@ -113,10 +114,14 @@ export const CrearNoticiaScreen = ({navigation}:Props) => {
             style={styles.container}
         >
             <View style={styles.containerUser}>
-                <Image
-                    source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
+            {
+                (user.imagenRespuesta!=='')
+                    ?<View style={styles.UserImg}><UserAvatar size={45} name={user.nombreRespuesta}/></View>
+                    :<Image
+                    source={{uri:user.imagenRespuesta}}
                     style={styles.UserImg}
-                />
+                    />
+            }
                 <Text
                     style={styles.textUser}
                 >

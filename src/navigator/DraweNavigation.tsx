@@ -5,7 +5,7 @@ import { View, Text, Image, TouchableOpacity, useWindowDimensions, Platform } fr
 import { styles } from '../theme/DraweCustomTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AuthContext } from '../context/authContext/AuthContext';
-
+import UserAvatar from 'react-native-user-avatar';
 const Drawer = createDrawerNavigator();
 
 export const DrawerNavigation = () => {
@@ -29,7 +29,7 @@ export const DrawerNavigation = () => {
 
 const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
 
-  const {Nombre} = useContext(AuthContext)
+  const {Nombre,user} = useContext(AuthContext)
 
   
 
@@ -43,10 +43,14 @@ const DrawerCustom = ({navigation}:DrawerContentComponentProps) => {
       }}>
       <View style={{...styles.avatarContainer}}>
           <View style={styles.imageContainer}>
-              <Image
-                source={require('../assets/../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
+          {
+            (user.imagenRespuesta!=='')
+              ?<UserAvatar size={55} name={user.nombreRespuesta}/>
+              :<Image
+                source={{uri:user.imagenRespuesta}}
                 style={styles.Image}
               />
+          }
           </View>
           <Text style={styles.Text}>
             {Nombre}

@@ -2,7 +2,7 @@ import React, { useContext} from 'react'
 import { Image, View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { styles } from '../theme/ContactTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
-
+import UserAvatar from 'react-native-user-avatar';
 
 
 
@@ -35,10 +35,14 @@ export const Contact = (props:any) => {
                             //style={{marginBottom:'1%'}}
                         >
                         <View style={{...styles.cardContainer}}>
-                            <Image
-                                style={styles.Image}
-                                source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
-                            />
+                            {
+                                (item.Imagen==='')
+                                    ?<View style={styles.Image}><UserAvatar size={85} name={item.Nombre}/></View>
+                                    :<Image
+                                    style={styles.Image}
+                                    source={{uri:item.Imagen}}
+                                    />
+                            }
                             <View
                                 style={styles.containerText}
                             >

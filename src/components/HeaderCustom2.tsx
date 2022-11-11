@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from '../theme/HeaderCustomTheme';
@@ -6,6 +6,8 @@ import { DrawerActions } from '@react-navigation/native';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import { Value } from 'react-native-reanimated';
 import { Contact } from './Contact';
+import { AuthContext } from '../context/authContext/AuthContext';
+import UserAvatar from 'react-native-user-avatar';
 
 interface Props extends DrawerScreenProps <any, any>{};
 
@@ -22,6 +24,8 @@ export const HeaderCustom2 = ({navigation,props}:any,) => {
             props.Filter(3,props.button)
         }
     }
+
+    const {user,Nombre} = useContext(AuthContext)
 
     return (
             <View 
@@ -43,10 +47,15 @@ export const HeaderCustom2 = ({navigation,props}:any,) => {
                         style={styles.DraweButton}
                         //onPress={() => navigation.toggleDrawer()}
                     >
-                        <Image
-                            source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
+                        {
+                            (user.imagenRespuesta!=='')
+                            ?<UserAvatar size={45} name={user.nombreRespuesta}/>
+                            :<Image
+                            source={{uri:user.imagenRespuesta}}
                             style={styles.Image}
                         />
+                        }
+                        
                     </TouchableOpacity>
 
                     <Text style={styles.Text}>

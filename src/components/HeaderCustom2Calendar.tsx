@@ -1,13 +1,16 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React from 'react'
+import React, { useContext } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from '../theme/HeaderCustomTheme';
+import UserAvatar from 'react-native-user-avatar';
+import { AuthContext } from '../context/authContext/AuthContext';
 
 interface Props extends StackScreenProps<any, any> {};
 
 export const HeaderCustom2Calendar = ({navigation}:Props) => {
     const {top} = useSafeAreaInsets();
+    const {user} = useContext(AuthContext)
     return (
         <>
             <View 
@@ -26,10 +29,14 @@ export const HeaderCustom2Calendar = ({navigation}:Props) => {
             >
                 <View style={{...styles.subContianer}}>
                     <TouchableOpacity style={styles.DraweButton}>
-                        <Image
-                            source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
+                    {
+                        (user.imagenRespuesta!=='')
+                            ?<UserAvatar size={45} name={user.nombreRespuesta}/>
+                            :<Image
+                            source={{uri:user.imagenRespuesta}}
                             style={styles.Image}
-                        />
+                            />
+                    }
                     </TouchableOpacity>
 
                     <Text style={styles.Text}>

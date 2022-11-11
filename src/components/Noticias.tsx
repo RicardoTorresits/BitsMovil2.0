@@ -5,6 +5,7 @@ import { styles } from '../theme/NoticiasTheme'
 import { NoticiasContext } from '../context/NoticiaContext/NoticiaContext';
 import { Item } from 'react-native-paper/lib/typescript/components/List/List';
 import { FlatList } from 'react-native-gesture-handler';
+import UserAvatar from 'react-native-user-avatar';
 
 
 const ArrReaccion=[
@@ -36,10 +37,14 @@ export const Noticias = (props:any) => {
                     <View
                         style={styles.containerUser}
                     >
-                        <Image
-                            source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')}
-                            style={styles.image}
-                        />
+                        {
+                                (item.imagenUsuario ==='')
+                                    ?<View style={styles.image}><UserAvatar size={45} name={item.Nombre}/></View>
+                                    :<Image
+                                    style={styles.image}
+                                    source={{uri:item.imagenUsuario}}
+                                    />
+                            }
 
                         <View style={styles.containerDatos}>
                             <Text style={styles.textTitle}>
