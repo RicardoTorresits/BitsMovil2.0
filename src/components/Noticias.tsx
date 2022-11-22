@@ -38,13 +38,13 @@ export const Noticias = (props:any) => {
                         style={styles.containerUser}
                     >
                         {
-                                (item.imagenUsuario ==='')
-                                    ?<View style={styles.image}><UserAvatar size={45} name={item.Nombre}/></View>
-                                    :<Image
-                                    style={styles.image}
-                                    source={{uri:item.imagenUsuario}}
-                                    />
-                            }
+                            (item.imagenUsuario ==='')
+                                ?<View style={styles.image}><UserAvatar size={45} name={item.Nombre}/></View>
+                                :<Image
+                                style={styles.image}
+                                source={{uri:item.imagenUsuario}}
+                                />
+                        }
 
                         <View style={styles.containerDatos}>
                             <Text style={styles.textTitle}>

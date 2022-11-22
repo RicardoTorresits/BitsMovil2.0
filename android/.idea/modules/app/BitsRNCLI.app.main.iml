@@ -51,6 +51,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="BitsRNCLI.react-native-splash-screen.main" />
+    <orderEntry type="module" module-name="BitsRNCLI.invertase_react-native-apple-authentication.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-async-storage_async-storage.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-firebase_app.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-firebase_auth.main" />
@@ -61,7 +63,6 @@
     <orderEntry type="module" module-name="BitsRNCLI.react-native-reanimated.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-safe-area-context.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-screens.main" />
-    <orderEntry type="module" module-name="BitsRNCLI.react-native-splash-screen.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-svg.main" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-vector-icons.main" />
     <orderEntry type="library" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0" level="project" />
@@ -72,8 +73,8 @@
     <orderEntry type="library" name="Gradle: com.facebook.fbjni:fbjni-java-only:0.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:4.9.2" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:2.9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.21" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.infer.annotation:infer-annotation:0.18.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />

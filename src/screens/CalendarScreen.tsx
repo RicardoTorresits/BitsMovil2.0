@@ -5,6 +5,7 @@ import { HeaderCustom2Calendar } from '../components/HeaderCustom2Calendar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { styles } from '../theme/CalendarTheme';
 import { CalendarioVacio } from '../components/CalendarioVacio';
+import { ConstrucionComponent } from '../components/ConstrucionComponent';
 
 
 
@@ -17,7 +18,7 @@ export const CalendarScreen = ({navigation,route}:Props) => {
     <View style={{flex:1,top:top,}}>
         <HeaderCustom2Calendar navigation={navigation} route={route}/>
 
-        <View style={{...styles.containerButton}}>
+        {/* <View style={{...styles.containerButton}}>
           <TouchableOpacity style={{...styles.button,backgroundColor:'#F7B801'}}>
             <Text style={{...styles.text}}>
               Hoy
@@ -62,12 +63,14 @@ export const CalendarScreen = ({navigation,route}:Props) => {
                 </Text>
             </View>
             
-              </View>*/}
+              </View>
             <View style={{width:'100%',height:'100%', justifyContent:'center'}}>
               <CalendarioVacio/>
             </View>
           </View>
-        </View>
+        </View> */}
+
+        <ConstrucionComponent/>
 
     </View>
   )

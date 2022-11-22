@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { styles } from '../theme/ReaccionesTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { HeaderCustom4 } from '../components/HeaderCustom4';
+import UserAvatar from 'react-native-user-avatar';
 
 interface Props extends StackScreenProps<any, any> {};
 
@@ -52,7 +53,14 @@ export const ReaccionesScreen = ({navigation,route}:Props) => {
           <View style={styles.containerReaccionesTotales}>
             <View style={{...styles.ContainerDatos}}>
               <View style={styles.sombraimg}>
-                <Image source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')} style={{...styles.img,}}/>
+              {
+                (user.imagenRespuesta!=='')
+                ?<View style={styles.img}><UserAvatar size={50} name={user.nombreRespuesta}/></View>
+                :<Image
+                  source={{uri:user.imagenRespuesta}}
+                  style={styles.img}
+                />
+              }
               </View>
               <View style={styles.textContainer}>
                 <Text style={{color:'#303030', fontWeight:'500', fontSize:19,lineHeight:18.75}}>

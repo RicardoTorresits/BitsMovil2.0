@@ -4,6 +4,7 @@ import { Text, View } from 'react-native'
 import { HeaderCustom3 } from '../components/HeaderCustom3'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Notificaciones } from '../components/Notificaciones';
+import { ConstrucionComponent } from '../components/ConstrucionComponent';
 
 interface Props extends StackScreenProps<any, any> {};
 
@@ -13,10 +14,11 @@ export const NotificaconScreen = ({navigation,route}:Props) => {
 
   return (
     <View
-      style={{top:top,alignContent:'center'}}
+      style={{flex:1,top:top}}
     >
         <HeaderCustom3 navigation={navigation} route={route}/>
-        <Notificaciones/>
+        {/* <Notificaciones/> */}
+        <ConstrucionComponent/>
     </View>
   )
 }

@@ -31,6 +31,8 @@
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="BitsRNCLI.app.main" scope="TEST" />
+    <orderEntry type="module" module-name="BitsRNCLI.react-native-splash-screen.main" scope="TEST" />
+    <orderEntry type="module" module-name="BitsRNCLI.invertase_react-native-apple-authentication.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-async-storage_async-storage.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-firebase_app.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-firebase_auth.main" scope="TEST" />
@@ -41,7 +43,6 @@
     <orderEntry type="module" module-name="BitsRNCLI.react-native-reanimated.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-safe-area-context.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-screens.main" scope="TEST" />
-    <orderEntry type="module" module-name="BitsRNCLI.react-native-splash-screen.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-svg.main" scope="TEST" />
     <orderEntry type="module" module-name="BitsRNCLI.react-native-vector-icons.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0" level="project" />
