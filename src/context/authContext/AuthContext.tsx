@@ -46,6 +46,22 @@ export const AuthContext = createContext({} as AuthContextProps)
 
 export const AuthProvider = ({children}:any) => {
 
+
+    useEffect(() => {
+      checkToken();
+    }, [])
+
+    const checkToken  = async () =>{
+        const token = await AsyncStorage.getItem('token');
+        console.log(token)
+
+        // no hay token
+        if(!token) return dispatch({type:'no-authenticated'});
+
+        //si hay token 
+    }
+    
+
     const [AuthLogin, setAuthLogin] = useState('home')
     const [Nombre, setNombre] = useState()
     const [Auth, setAuth] = useState('false')
@@ -118,6 +134,8 @@ export const AuthProvider = ({children}:any) => {
                                 token:resp.data.token
                             } 
                         });
+                        await AsyncStorage.setItem('token',resp.data.token)
+                        //await AsyncStorage.setItem('url',resp.data.url)
                     } catch (error) {
                      console.log(error)   
                     }
@@ -152,6 +170,7 @@ export const AuthProvider = ({children}:any) => {
             logInchange,
             logInGoogle,
             logInApple,
+            logInEmail,
             logOut,
             ModalCloseOrOpen,
         }}>

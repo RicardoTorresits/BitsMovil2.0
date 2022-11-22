@@ -23,7 +23,7 @@ const bitsApi  = axios.create({
 //   async(config:any)=>{
 //     const baseURL = AsyncStorage.getItem('url');
 //     if(baseURL != baseURL){
-//       config.url=baseURL
+//       config.baseURL=url
 //     }
 //     return config;
 //   }

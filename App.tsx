@@ -6,13 +6,16 @@ import { StackNavigator } from './src/navigator/StackNavigator';
 import { AuthProvider } from './src/context/authContext/AuthContext';
 import { MoodProvider } from './src/context/myMoodContext/MoodContext';
 import { NoticiasProvider } from './src/context/NoticiaContext/NoticiaContext';
+import { ReaccionesProvider } from './src/context/ReaccionesContext/ReaccionesContext';
 
 const AppState = ({children}:any) =>{
   return(
     <AuthProvider>
       <NoticiasProvider>
         <MoodProvider>
-          {children}
+          <ReaccionesProvider>
+            {children}
+          </ReaccionesProvider>
         </MoodProvider>
       </NoticiasProvider>
     </AuthProvider>
