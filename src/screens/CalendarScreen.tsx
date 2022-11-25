@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { styles } from '../theme/CalendarTheme';
 import { CalendarioVacio } from '../components/CalendarioVacio';
 import { ConstrucionComponent } from '../components/ConstrucionComponent';
+import { Loading } from '../components/Loading';
 
 
 
@@ -70,7 +71,8 @@ export const CalendarScreen = ({navigation,route}:Props) => {
           </View>
         </View> */}
 
-        <ConstrucionComponent/>
+        {/* <ConstrucionComponent/> */}
+        <Loading/>
 
     </View>
   )

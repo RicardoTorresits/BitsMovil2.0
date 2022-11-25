@@ -10,7 +10,7 @@ import { styles } from '../theme/LogginTheme';
 import { AuthContext } from '../context/authContext/AuthContext';
 import { LogginEmail } from '../components/LogginEmail';
 import { MonoComponent } from '../components/MonoComponent';
-import SplashScreen from 'react-native-splash-screen';
+import LottieSplashScreen from "react-native-lottie-splash-screen";
 
 
 
@@ -18,7 +18,8 @@ import SplashScreen from 'react-native-splash-screen';
 export const LogginScreen = () => {
 
   useEffect(() => {
-    SplashScreen.hide()
+    //SplashScreen.hide()
+    LottieSplashScreen.hide();
   }, [])
   
 
