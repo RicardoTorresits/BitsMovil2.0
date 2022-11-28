@@ -15,5 +15,20 @@ export const styles = StyleSheet.create({
     fontSize:21,
     lineHeight:24.61,
     marginTop:90
-   } 
+   },
+   Button:{
+      backgroundColor:'#F7B801',
+      width:108,
+      height:41.14,
+      borderRadius:100,
+      justifyContent:'center',
+      alignItems:'center',
+      marginTop:30
+    },
+    ButtonText:{
+      color:'#FFFFFF',
+      fontSize:16,
+      lineHeight:18.75,
+      fontWeight:'700'
+    } 
 });

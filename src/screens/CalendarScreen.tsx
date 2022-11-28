@@ -5,8 +5,8 @@ import { HeaderCustom2Calendar } from '../components/HeaderCustom2Calendar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { styles } from '../theme/CalendarTheme';
 import { CalendarioVacio } from '../components/CalendarioVacio';
-import { ConstrucionComponent } from '../components/ConstrucionComponent';
 import { Loading } from '../components/Loading';
+import { ConstrucionComponent2 } from '../components/ConstrucionComponent2';
 
 
 
@@ -71,8 +71,8 @@ export const CalendarScreen = ({navigation,route}:Props) => {
           </View>
         </View> */}
 
-        {/* <ConstrucionComponent/> */}
-        <Loading/>
+        <ConstrucionComponent2/> 
+        {/*<Loading/>*/}
 
     </View>
   )
