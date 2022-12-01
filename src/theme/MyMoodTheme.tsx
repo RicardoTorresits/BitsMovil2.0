@@ -104,7 +104,7 @@ export const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         top:'45%',
-        left:'8%',
+        left:'12%',
     },
     modalText:{
         color:'#303030',

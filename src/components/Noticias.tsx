@@ -14,6 +14,24 @@ const ArrReaccion=[
     {Icon:require('../assets/favorite_border.png'),idReaccion:'3'}
 ]
 
+const ArrReaccion1=[
+    {Icon:require('../assets/Clap.png'), idReaccion:'1'},
+    {Icon:require('../assets/reaccion.png'),idReaccion:'2'},
+    {Icon:require('../assets/favorite_border.png'),idReaccion:'3'}
+]
+
+const ArrReaccion2=[
+    {Icon:require('../assets/Group.png'), idReaccion:'1'},
+    {Icon:require('../assets/Happy.png'),idReaccion:'2'},
+    {Icon:require('../assets/favorite_border.png'),idReaccion:'3'}
+]
+
+const ArrReaccion3 =[
+    {Icon:require('../assets/Group.png'), idReaccion:'1'},
+    {Icon:require('../assets/Happy.png'),idReaccion:'2'},
+    {Icon:require('../assets/Heart.png'),idReaccion:'3'}
+]
+
 
 
 export const Noticias = (props:any) => {
